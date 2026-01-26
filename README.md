@@ -1,0 +1,1 @@
+This repository is the open-source, local-first implementation of the Neurolous Anthropologic Agent. It allows users to host a private version of a "Digital Legacy" using Ollama and Gemma. For evaluation metrics and research narratives, see neurolous-evals.
