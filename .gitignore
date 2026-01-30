@@ -1,0 +1,149 @@
+# =============================================================================
+# Neurolous Open Source Agent - Git Ignore
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# User Data & Privacy (CRITICAL - Never commit personal data)
+# -----------------------------------------------------------------------------
+# Persona configuration (contains personal info about the deceased)
+backend/config/persona.json
+
+# Conversation history database
+backend/conversation_history.db
+backend/*.db
+
+# Vector database (contains embedded personal memories)
+backend/chroma_db/
+
+# Voice cache (generated audio files)
+backend/voice_cache/
+
+# Voice samples (user's personal voice recordings)
+VoiceCloning/
+**/voice_samples/
+
+
+# -----------------------------------------------------------------------------
+# Python / Virtual Environments (THIS IS THE BIG ONE - 2.4GB!)
+# -----------------------------------------------------------------------------
+backend/venv/
+venv/
+.venv/
+ENV/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Environment files
+.env
+.flaskenv
+*.local
+
+# --- Python / FastAPI ---
+__pycache__/
+*.py[cod]
+*$py.class
+.venv
+venv/
+backend/venv
+ENV/
+.env
+.flaskenv
+CLAUDE.md
+
+# --- Flutter / Dart ---
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+build/
+# If you are using Pigeon or generated code, you might include:
+# *.g.dart
+# *.freezed.dart
+
+# --- Mobile (iOS/Android) ---
+.ios/
+.android/
+ios/.generated/
+android/local.properties
+android/key.properties
+*.keystore
+*.jks
+
+# --- OS / Editors ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- Cloud & Deployment (AWS/GCP) ---
+.aws/
+.gcloud/
+service-account-file.json
+terraform.tfstate*
+
+# --- Archival and Database Files ---
+Archive/
+backend/father_data.csv
+backend/The_Double_You_Book_AC2.pdf
+
+# -----------------------------------------------------------------------------
+# Flutter / Mobile
+# -----------------------------------------------------------------------------
+# Already covered by mobile/.gitignore but adding for completeness
+mobile/build/
+mobile/.dart_tool/
+mobile/.packages
+mobile/pubspec.lock
+
+# iOS
+mobile/ios/Pods/
+mobile/ios/.symlinks/
+mobile/ios/Flutter/Flutter.framework
+mobile/ios/Flutter/Flutter.podspec
+mobile/ios/Flutter/Generated.xcconfig
+mobile/ios/Flutter/app.flx
+mobile/ios/Flutter/App.framework
+mobile/ios/Runner/GeneratedPluginRegistrant.*
+
+# Android
+mobile/android/.gradle/
+mobile/android/local.properties
+mobile/android/*.iml
+
+# -----------------------------------------------------------------------------
+# Logs
+# -----------------------------------------------------------------------------
+*.log
+logs/
+
+# -----------------------------------------------------------------------------
+# Temporary Files
+# -----------------------------------------------------------------------------
+temp_*
+*.tmp
+*.temp
+speech_output.wav
