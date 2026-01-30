@@ -394,4 +394,4 @@ This project is open source under the MIT License.
 
 ## Contributing
 
-Contributions are welcome! Please read the development guidelines in `CLAUDE.md` before submitting pull requests.
+Contributions are welcome! 

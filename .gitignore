@@ -98,6 +98,7 @@ Thumbs.db
 .idea/
 *.swp
 *.swo
+CLAUDE.md
 
 # --- Cloud & Deployment (AWS/GCP) ---
 .aws/
