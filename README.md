@@ -7,7 +7,7 @@
 
 ## What is Neurolous?
 
-Neurolous is an **AI-powered grief companion** that helps preserve and interact with the memory of loved ones. Using advanced conversational AI, voice cloning, and memory retrieval, Neurolous creates a respectful digital representation—a "Digital Soul"—that family members can talk to, ask questions, and find comfort in.
+Neurolous is an **AI-powered grief companion** that helps preserve and interact with the memory of loved ones. Using advanced conversational AI, voice cloning, and memory retrieval, Neurolous creates a respectful digital representation, a "Digital Soul" that family members can talk to, ask questions, and find comfort in.
 
 ### Key Features
 
@@ -17,13 +17,14 @@ Neurolous is an **AI-powered grief companion** that helps preserve and interact 
 - **Complete Privacy** — Runs 100% offline on your own hardware. No cloud. No data leaves your device.
 - **Mobile App** — iOS and Android companion app for convenient, intimate conversations
 - **Persona Agnostic** — Configure it for any individual via the Admin Panel
+- **Website Chat** — Use the web browser or mobile app to chat
 
 ### The Neurolous Ecosystem
 
 | Project | Description |
 |---------|-------------|
 | **[neurolous.com](https://neurolous.com)** | Full-featured cloud-hosted service for those who prefer a managed experience |
-| **This Repo** | Open-source, self-hosted version for privacy-focused users and developers |
+| **This Repo** | Open-source, self-hosted version for more privacy-focused users and developers |
 | **[neurolous-evals](https://github.com/arvelchappell3/neurolous-evals)** | Research framework for evaluating narrative safety in anthropomorphic AI agents |
 
 The **neurolous-evals** research toolkit provides safety evaluations using the Cross-Cultural Narrative Alignment Index (CCNAI) to detect manipulation tactics and ensure ethical AI interactions. You can download evaluation datasets directly from the local backend dashboard.
@@ -90,7 +91,7 @@ By default, Ollama uses a 2048 token context window. For better conversation qua
 
 1. Open **Ollama** settings (click the Ollama icon in the menu bar)
 2. Go to **Settings** > **Model Options**
-3. Set **Context Length** to `8192` (or higher based on your RAM)
+3. Set **Context Length** to `128k` (or higher based on your RAM)
 
 Alternatively, set it via environment variable before starting Ollama:
 
