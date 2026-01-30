@@ -5,11 +5,34 @@
   <p><em>Local-First Digital Legacy & Anthropologic Interface</em></p>
 </div>
 
+## What is Neurolous?
+
+Neurolous is an **AI-powered grief companion** that helps preserve and interact with the memory of loved ones. Using advanced conversational AI, voice cloning, and memory retrieval, Neurolous creates a respectful digital representation—a "Digital Soul"—that family members can talk to, ask questions, and find comfort in.
+
+### Key Features
+
+- **Conversational Memory** — Chat naturally with an AI that remembers life stories, personality traits, and wisdom from your loved one
+- **Voice Synthesis** — Hear responses in a cloned voice using neural text-to-speech (requires a 7-second audio sample)
+- **Knowledge Ingestion** — Upload writings, journals, facts, and life events to build a rich, retrievable memory
+- **Complete Privacy** — Runs 100% offline on your own hardware. No cloud. No data leaves your device.
+- **Mobile App** — iOS and Android companion app for convenient, intimate conversations
+- **Persona Agnostic** — Configure it for any individual via the Admin Panel
+
+### The Neurolous Ecosystem
+
+| Project | Description |
+|---------|-------------|
+| **[neurolous.com](https://neurolous.com)** | Full-featured cloud-hosted service for those who prefer a managed experience |
+| **This Repo** | Open-source, self-hosted version for privacy-focused users and developers |
+| **[neurolous-evals](https://github.com/arvelchappell3/neurolous-evals)** | Research framework for evaluating narrative safety in anthropomorphic AI agents |
+
+The **neurolous-evals** research toolkit provides safety evaluations using the Cross-Cultural Narrative Alignment Index (CCNAI) to detect manipulation tactics and ensure ethical AI interactions. You can download evaluation datasets directly from the local backend dashboard.
+
+---
+
 ## Overview
 
 This repository contains the open-source implementation of the Neurolous Agent framework. It is designed to create a private, offline "Digital Soul" using Retrieval Augmented Generation (RAG) and Local LLMs (Ollama/Gemma).
-
-While the included reference data is based on a sample persona, this codebase is **persona-agnostic**. You can configure it to represent any individual by updating the configuration via the Admin Panel.
 
 ## Ethical & Legal Notice
 
