@@ -1,0 +1,3700 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww15680\viewh13340\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 # content_extractor.py\
+\
+content = """--- PAGE 1 ---\
+\
+The Double-You Book\
+The Double-You Book\
+The YOU you Know and the\
+YOU you have yet to Discover\
+By.Drs. Arvel & Bobbie Chappell\
+Edited by Dr. S. Epps\
+\
+--- PAGE 2 ---\
+\
+The Double-You Book\
+\
+The YOU you know and the YOU you have yet to discover\
+By Drs.\
+Arvel & Bobbie Chappell\
+Edited by Dr. S. Epps\
+Copyright \'a9 1997 by Drs. Arvel and Bobbie Chappell\
+All rights reserved. No part of this book may be reproduced or transmitted in any form or by\
+any means, electronic or mechanical, including photocopy, recording, or any information\
+storage and retrieval system, without prior permission in writing from the publisher.\
+Designed and Illustrated by Arvel Chappell & S. Epps\
+First Printing\
+Published by\
+Aldor Productions\
+P.O. Box 517 Highland, California 92346\
+909-875-9552\
+Printed in the United States of America\
+ISBN 0-9662162-0-2\
+\
+--- PAGE 3 ---\
+\
+Dedicated to all of\
+Humanity,\
+especially to those who ask\
+WHY,\
+and seek answers.\
+Our Thanks and Loving Gratitude to\
+Rev. Anna Franz\
+Rev. Natahlie Forrest\
+Rev. John Meyer\
+Elaine Meyer\
+Rosa Diaz\
+Dr. Esteban Diaz\
+Dr. Glenda Cline\
+Dr. Nancy Simon\
+Dr. Lisa Carman\
+Dr. Zar ben Omar\
+Dr. Beulah M. Omar\
+Dr. Margaret Lento\
+Dr. S. Epps\
+Florence Tavor\
+Judie Patton\
+Irasha Pearl\
+Safisha Murphy\
+Victoria Jardine\
+Theresa Pratt\
+Oluchi Taylor\
+Mercedes Carol\
+Anabel Haskins\
+Edna McCree\
+Catherine Shabazz\
+Magda Nunez\
+Andrew Johnson\
+Juliana Dekal\
+Eleanor Carey\
+John Turner\
+Gay Shenton\
+Ceanne DeRohan\
+And to all of us who are learning to practice\
+Right Use of Will\
+\
+--- PAGE 4 ---\
+\
+Contents\
+Welcome to Your Personal Journey of Discovery\
+The first step is Meditation\
+There are Four Aspects of who we are\
+\
+--- PAGE 5 ---\
+\
+Your Common Denied Feelings 19\
+"We" are "They" 19\
+Fixing It!\
+20\
+Changing It! 20\
+What Changes Would You Make? 21\
+Oh yes, you do have everything you want! 22\
+Are you (or someone else) crossing your will? 23\
+Love is the Key 23\
+4\
+Intent, Purpose, Balance 24\
+You express who you are, whether aware of it or not 24\
+Metaphysical You 25\
+How to ask the "right" questions 26\
+Who wins? 26\
+Which "you" are "you" with another? 27\
+And in relationships...\
+27\
+Recognizing when your WILL is being crossed! 28\
+Creator's Four Aspects\
+28\
+Learn How to Balance and Align 29\
+Vent (Move) Your Feelings as Needed 31\
+How to stop making "inappropriate choices" 31\
+5\
+Meditation & Your Chakra System 33\
+How to Meditate 33\
+Your Chakra System 35\
+Seek Your Own Answers 37\
+Understanding Polarity 38\
+How Our Chakras Align with Our Four Aspects 39\
+How to Balance and Align Yourself by Aligning Your Chakras 41\
+Affirmation/Prayer\
+6\
+46\
+Balancing Spirit, Heart, Will, & Body 47\
+What is the quality of your life right now? 47\
+Death was not intended in Creation.\
+Ultimate health is everlasting life. 48\
+48\
+In fact, you do have exactly what you want right now.\
+People are usually polarized around most issues.\
+Are You Spirit-Polarized? 51\
+Are You Will-Polarized?\
+52\
+Are You Heart-Polarized?\
+53\
+How do you know which polarizations apply to you?\
+Are You Body-Polarized? 54\
+49\
+Your Goal: Be Balanced, Aligned, and Centered! 55\
+52\
+48\
+\
+--- PAGE 6 ---\
+\
+7\
+Balanced Choice, Balanced Outcome 56\
+So you think you're really doing your own choosing? 56\
+The key to making this knowledge work for\
+you is the degree of honesty you have with you.\
+56\
+Honestly come to grips with yourself and truly commit to you.\
+Why the emphasis on you? 57\
+The Creator's gift to us all is Life and Love 57\
+57\
+8\
+Balance and Alignment 58\
+Let's look at balance and alignment\
+Your Body is a Living Miracle\
+58\
+59\
+Catch a "warm" or a "cold", it's your CHOICE 61\
+Ill health and disease are a way through which we learn\
+9\
+Free Will and Evolution 63\
+You were drawn to this book for a reason\
+Creator has given each of us Free Will.\
+64\
+Do you love you?\
+10\
+Communication\
+66\
+65\
+We seldom succeed at "communicating" 66\
+Masks, a way of life 67\
+Eventually, you must face you! 68\
+Will and Power are one\
+11\
+Your Obligation to... 70\
+69\
+63\
+62\
+To whom do you owe the most for the quality of your life? 70\
+Your daily choices are important!\
+12\
+The Rules for Being Human 72\
+Owner's Manual for Your Life\
+71\
+\
+--- PAGE 7 ---\
+\
+Part II\
+The YOU you know and the YOU you have yet to discover equals MORE!\
+13\
+Body Speaks with Spirit, Heart, & Will\
+Introduction: A Dialogue\
+Between the Four Aspects 73\
+Agree to Disagree 74\
+23\
+73\
+Essence and Fragmentation 112\
+24\
+14\
+Resentment and Envy 80\
+15\
+Blame and Guilt 82\
+16\
+Fear and Anger\
+17\
+85\
+Habits and Judgements 89\
+18\
+Rage and Terror 93\
+19\
+Perspective and Your Point of View 95\
+20\
+When We Agree 100\
+21\
+Problem to Challenge 103\
+22\
+Solutions Define the Moment 107\
+Denied and Lost Will 117\
+25\
+Gapped and the Imprints 121\
+26\
+Awareness and Attention 123\
+27\
+Cell Memory 128\
+28\
+Interspection / Intraspection 131\
+29\
+Right Place and Right Time 135\
+30\
+Right Way and Right Person 138\
+31\
+Plane of Reversal 140\
+Epilogue 143\
+Recommended Reading List 144\
+Meet the Authors 145\
+For More Information\
+146\
+\
+--- PAGE 8 ---\
+\
+Welcome to Your\
+Personal Journey of Discovery\
+The first step is Meditation.\
+Learning to "listen" to that "voice within" you. Here is where the\
+beginning of discovering who you are begins.\
+You discover the "God/\
+Goddess Consciousness" that is part of you.\
+Relating to self is the basis upon which we relate to others.\
+When you\
+understand yourself you begin to understand where others may "be"\
+at a given moment.\
+Feelings about who you are and how you perceive\
+yourself and others are basic to learning to cope with present reality.\
+Strong feelings must be expressed. Because we choose not to express\
+our feelings for the most part, this is the primary reason for discord in\
+our personal and interpersonal relationships.\
+There are specific reasons why people do the things they do. They\
+may be aware of these reasons or not.\
+Perceptions and concepts play\
+important roles in helping us understand our behavior.\
+Energy is just energy. It can be seen, felt, tasted, sensed and\
+touched. It can be directed.\
+It is just now being understood. We are\
+energy. We have volition.\
+We have responsibility to understand and\
+use that energy wisely, consciously.\
+There are fields of energy that\
+surrounds us and are part of us.\
+We will explore what they are and\
+how to direct the energy.\
+Your "Chakras" (energy centers located in\
+and around your body), and "Aura" (energy field) are governed by\
+"Natural Laws".\
+You will be introduced to both.\
+Other planes of existence have been long suspected by many. You\
+will decide for yourself.\
+Channeling is a form of mediumship. You\
+will likely discover your own mediumship abilities.\
+\
+--- PAGE 9 ---\
+\
+We introduce you to "new information" and concepts yet to be widely\
+known, and rich "food for thought."\
+You create your reality; this is\
+not a new concept.\
+HOW you create your reality, as addressed here is\
+brand new!\
+You will be facilitated through this work which gives you\
+enough to begin learning how to create your own reality.\
+It is up to\
+you to test the validity and correctness of this information and then\
+apply it to your life.\
+There are Four Aspects of who we are:\
+\'95 SPIRIT\
+We have a "God Consciousness which is Spirit.\
+\'95 HEART\
+We are Heart. We must have "love" for ourselves first, so\
+we can give it to others.\
+\'95 WILL\
+Specifically "free will" the Creator's gift to us. We must\
+express our Will without crossing another's Will or\
+allowing our Will to be crossed.\
+\'95 BODY\
+Body, our form, is the physical manifestation, with which\
+we express in this reality and experience all that can be seen.\
+We must align and balance these Four Aspects in order to sustain our\
+lives and really, to save ourselves.\
+Misalignment is prevalent in our\
+lives, as attested by the general content of newspapers and radio/TV\
+newscasts.\
+Negativity, strife, and "lovelessness" abounds.\
+This discovery book introduces You to the real YOU.\
+It facilitates discovering who YOU truly are.\
+Step by step, it shows you how to\
+align, integrate, and balance\
+your Four Aspects:\
+Spirit, Heart, Will, and Body.\
+\
+--- PAGE 10 ---\
+\
+Part I\
+Discover the Who, What, and Why of You;\
+Then Choose the Where and When\
+\
+--- PAGE 11 ---\
+\
+Who, What Why, Where. When 1\
+1\
+Who, What, Why, Where, When\
+How to discover "WHO" you are\
+You have to be curious enough to form the question in the first place\
+or desperate enough with the condition of your life to wonder what is\
+going on and why?\
+Why are you here, and where is here?\
+You might ask in relationship to what? We would applaud you.\
+Whether or not you have asked yourself these questions, you either\
+have a very good idea of who you are, or not a clue and could care\
+less.\
+Maybe it is a burning question you have asked yourself more\
+than once and have come up blank, or at best clouded as to the\
+answer.\
+Notice two very important things:\
+1) you asked the question\
+2) you are seeking an answer\
+The answer is the discovery part.\
+Let's set some ground rules so that you, the reader and we, the\
+authors, can come to some understanding.\
+The Who we are talking\
+about is You. This You however, you have not met before.\
+What you\
+discover is the answer to "Who" you are.\
+You may be reading this because you were intrigued by the title.\
+Perhaps you are browsing now to see if this book is worth your time\
+and money.\
+Are you looking for some clue that will tell you that you\
+have read a similar work, or heard this before?\
+You should take the\
+time to discern any work.\
+THE W BOOK\
+1\
+THE W BOOK\
+\
+--- PAGE 12 ---\
+\
+Who, What, Why, Where, When.\
+1\
+Let me say now that you have not heard or read before,\
+what you are now about to read.\
+This experience is like no\
+other you have had before.\
+We assure you that once you\
+have read this entire book, you will not think of yourself in\
+the same way.\
+You will not view othes in the same way. You\
+will not see the world in the same way.\
+You are in for a real\
+"check" on your reality!\
+Discover the WHY you are\
+Do you remember when you struck out on your own? You left the\
+"nest" of your up bringing.\
+Think back to that day when you\
+consciously knew that this was it; you were out on you own.\
+How did\
+it feel? No one to tell you what to do! You had finally gained your\
+independence.\
+If this hasn't happened for you, that's ok too. However, if it has, recall\
+that day and what it represented to you.\
+Whether it was a day of\
+celebration or dread only matters to you.\
+There you were, out on your own, independent and free.\
+You're going\
+to take the world by storm, a "take-charge" kind of person.\
+How long did it take for your bubble to burst, a week, month, year, or\
+few days?\
+More importantly, have you regained your footing in the\
+mean time?\
+Are you still in charge or have you ever been?\
+Are you\
+independent, free, and have you taken the world by storm?\
+Do you\
+have everything in your life you could possibly want? Are you\
+completely happy and content?\
+If you are not, why not?\
+Where do the circumstances of our lives come from? If you have\
+asked "why me?", then you know what I mean.\
+Notice when you ask\
+yourself this question, it seems obvious that it has nothing to do with\
+you, but it's someone or something else that's responsible for the\
+"Why" of your circumstance(s).\
+If your life seems to be an unending\
+string of "circumstances" that are beyond your control, then don't stop\
+reading this book!\
+Have we got a surprise for you! It is all your\
+creation!\
+THE W BOOK\
+2\
+THE W BOOK\
+\
+--- PAGE 13 ---\
+\
+Who, What, Why, Where, When 1\
+You just have to live long enough and you will begin to ask: "Why is\
+this happening to me?"\
+You have asked and this is the first step to\
+finding out the "Why".\
+Let us try to make sense of it all! You will discover that when you\
+begin to seek answers to the most troubling and difficult questions\
+you could possible ponder, your life will change.\
+What, What, WHAT\
+If you are wearing a frown on your face right now, then I have\
+succeeded in peeking your ire, striking a nerve, pricking your curiosity\
+to keep reading.\
+What we are talking about now is the "What".\
+"What" is it about your life that makes no sense sometimes?\
+No matter how you try and "fix" whatever it is, it just doesn't\
+seem to work\
+"What" makes your life tick?\
+"What" is the substance of your life?\
+"What" is the significance of your life and the people you have\
+in it?\
+Here you are all grown up. You have people in your life you care\
+about and who care about you.\
+What have you got to show for it?\
+Where is the bliss, joy, happiness, and struggle-free life you\
+envisioned?\
+Everywhere you look; newspaper, radio, TV, everyone's life seems to\
+be all messed up.\
+The people you work with all have similar problems\
+to deal with;\
+some not as bad and some a lot worse than yours.\
+No matter what part of our lives we pause to look at, there is\
+something there that just doesn't seem right.\
+People just don't seem to\
+care about one another "like they use to". So many people "solve"\
+problems with violence.\
+Don't people talk any more?\
+There is more about the "What" that we are talking about here - the\
+"What" of you.\
+You contribute to all that you see around you.\
+Whether "good, bad or indifferent", we all contribute individually and\
+collectively.\
+THE W BOOK\
+3\
+THE W BOOK\
+\
+--- PAGE 14 ---\
+\
+WHERE AND WHEN\
+Who, What, Why, Where, When 1\
+Now, are you beginning to understand how important Discovery is\
+You have the answers! Answers?\
+You ask, where do answers come\
+from? They come from the way we make CHOICES, how we\
+CHOOSE.\
+We choose daily, hourly, and minute by minute on many\
+things. We are even unconscious of choices we make.\
+Yet we make\
+them none the less. The lack of awareness about the choices we make\
+is the difference in how and why we make certain choices.\
+It is also\
+the difference we make in how our lives appear to others and most\
+importantly to ourselves.\
+How else do we wind up "Where" we are most of the time?\
+No\
+matter "Where" you are in your life right now, you are there because\
+you chose to be there!\
+When you begin to understand how that can\
+be, you can begin to make better choices.\
+If you are in a situation or circumstance that is just intolerable, why do\
+you stay?\
+Whatever reasons you come up with, know that you are\
+choosing one way or the other.\
+Whatever the justification is, whether\
+you are rationalizing or manipulating yourself, or someone else, you\
+are doing it.\
+If you say it is because of someone or something else\
+other than you, again you are choosing.\
+Even when you believe you\
+have no choice, that too is a choice; you choose to believe what you\
+believe.\
+When you first picked up this book and began reading, for whatever\
+reason, if you are still reading, that is for a reason too.\
+Hear me when\
+I say you are now beginning a journey of Discovery about you.\
+That\
+journey will lead you to answers about WHO, WHAT and WHY you\
+are.\
+You will know and understand that it is simply about the choices you\
+make; they determine your life.\
+When you understand, and most\
+importantly, know without a doubt that your choices determine\
+"When" you express as the "Who" that you are, it is because of\
+"What" you have determined is best for all concerned.\
+"Why"\
+becomes crystal clear; it could not be otherwise. It is happening right\
+in your "now" and that is "Where" ever you are.\
+THE W BOOK\
+THE W BOOK\
+\
+--- PAGE 15 ---\
+\
+2\
+It's a Matter of Choice\
+It's a Matter of Choice.\
+2\
+Choosing Choices\
+If you are still with me, then let's begin. This book shares accounts of\
+our experiences in life and our conclusion of how the balance of it will\
+unfold.\
+It is also a text and handbook. It shows you how you too, can\
+make definitive changes in your life as you CHOOSE and make\
+decisions.\
+How do we choose?\
+Where do choices come from?\
+What do we choose?\
+What do we choose with?\
+Why do we make the choices we do?\
+Why do we regret some of the choices we make and celebrate\
+others?\
+\'95 Why is it always after the fact that we have a clue?\
+As we have already mentioned, most of us make choices\
+unconsciously.\
+THE W BOOK\
+5\
+THE W BOOK\
+\
+--- PAGE 16 ---\
+\
+It's a Matter of Choice\
+2\
+Did Your Parents Make You Do It?\
+Like almost everyone, in the beginning we had most of our choices\
+made for us.\
+Our parents of course, made those first few major\
+choices in our lives;\
+where we lived and went to school, stuff like that,\
+and what we had for dinner, even the brussel sprouts we never\
+learned to like though now we choose to eat them or not.\
+For most of us, when we finally were out on our own and had to make\
+all the decisions concerning our lives, it was a rude awakening.\
+There\
+were times we wanted to run and make for home, or someplace\
+where someone else would make decisions for us.\
+There was one choice, that was made for most of us, as black people,\
+early in our lives, for which we had no choice.\
+We had to go to church\
+every Sunday, from 9 a.m. to 9 p.m.\
+most Sundays: Sunday School,\
+Morning Service, Afternoon Service and Evening Service.\
+From about age seven or eight I went, no choice.\
+Then one Sunday\
+morning Mom asked, "Arvel do you want to go to church?"\
+She\
+knew from the expression on my face that I must not have heard her\
+correctly and she repeated the question, I answered with an\
+undeniable and resounding, "no Ma'me!".\
+She smiled and left. I had\
+the house to myself!\
+- and a good case of the guilts, but I enjoyed that\
+Sunday.\
+She sensed and knew of my frustration with the "officers" of the\
+church and their in-ability or unwillingness to answer a lot of my\
+questions about the Bible and Spirituality.\
+I thanked her dearly for\
+seeing my frustration and allowing me to make other choices about\
+"religion".\
+I could never get anyone to explain certain scriptures. How did Cain\
+and Abel take wives if there was only Adam and Eve?\
+What\
+happened from the time Christ turned 12 years old, left and then\
+returned at age 30?\
+And a few hundred other questions I had, and\
+was promptly told not to ask.\
+I share this to prompt you to ask yourself, how do you view and\
+understand your notion about God / Creator?\
+In a work such as this, it is appropriate to ask as a first step.\
+Really\
+this is a question about one's relationship to the Creator.\
+THE W BOOK 6\
+THE W BOOK\
+\
+--- PAGE 17 ---\
+\
+It's a Matter of Choice 2\
+Four Godly Notions\
+As you ponder that for a moment, I am going to offer other notions of\
+mine, discovered by me from the thousands of sources I have\
+investigated on my path of self-discovery over a number of years.\
+Notion 1:\
+God / Creator is an evolving Creator. Creator is learning. Creator\
+has made and may make mistakes;\
+that's how S/He learns. Pause\
+a minute and imagine Creator looking out over Creation and\
+wanting to improve it.\
+How else would S/He have known what to\
+fix?\
+Notion 2:\
+Death was not intended to be in Creation. I pondered this one for a\
+while.\
+I'd ask in my prayers why is the world in such a state?\
+Death and destruction seemed anti-God like to me. The Devil\
+wasn't big enough, not with the view of God I held.\
+Notion 3:\
+Reincarnation was an attempt to correct death and it failed.\
+No\
+matter how many feelings of "deja vu" I had, for a long time, the\
+concept of reincarnation just did not sit well with me, until I\
+discovered this information, and suddenly reincarnation made\
+sense.\
+Notion 4:\
+The Creator is composed of four aspects: Spirit, Heart, Will, and\
+Body.\
+As part of Creator, we also are four aspects. As we begin to\
+understand, accept, and balance and align these aspects;\
+disease,\
+aging, and death will no longer have to be experienced.\
+These are a few of the notions I will address. As notions they can be\
+accepted or not by you.\
+You have your own notions about truth and\
+reality. By now you may have guessed that this journey of discovery\
+upon which you have embarked with the reading of this book requires\
+a certain degree of openness on your part.\
+Please continue to be open.\
+Learning does not stop for any of us until, and only when, we make\
+the choice not to learn and grow.\
+Whatever notions you hold about your relationship to Creator, please\
+do not discard them, because any new information is just a notion\
+until you have investigated and tested it.\
+Understand that there will\
+always be new information as long as you are seeking to know more.\
+THE W BOOK\
+7\
+THE W BOOK\
+\
+--- PAGE 18 ---\
+\
+3\
+Thoughts Are Things\
+Thoughts Are Things.\
+3\
+Are You What They Think of You?\
+How do you track your life's progress? How do you measure the\
+successes of your life?\
+Is it the car you drive, the home you own, the\
+job you have, your career, or the people around you that help you feel\
+fulfilled?\
+Most of us allow what others think, to dictate how and what we do.\
+We have this image to uphold, and uphold it we must, regardless of\
+what it is, as opposed to what we think it is.\
+Have you ever contemplated your life's purpose? What are you doing\
+here, alive on the earth?\
+What are you doing toward your life's\
+purpose? No matter what you think that purpose is, ask yourself,\
+"how does it feel"?\
+And if you have not yet decided your life's\
+purpose, why not?\
+Look around you and describe what you see. Look, maybe for the first\
+time, at who you are.\
+If you are really brave, ask those close to you to\
+describe you to you.\
+Listen as this person speaks, take notes if you\
+must, then compare what you thought they thought about you.\
+Is there alignment with what you think about you?\
+THE W BOOK\
+8\
+THE W BOOK\
+\
+--- PAGE 19 ---\
+\
+Thoughts Are Things. 3\
+What is Your Greatest Desire?\
+Putting all that aside for the moment, how would you express your\
+greatest desire?\
+What do you want for your life?\
+What is your will?\
+Where does desire come from?\
+How do you decide what is best for you? Oh, you don't decide\
+what is best for you? Why not?\
+If you don't make your decisions based on what is best for you,\
+then how do you make your decisions?\
+Oh, you let others make decisions which they believe are best\
+for you? How is it working? It's not;\
+why not? Not your\
+choices!\
+Why didn't you choose for you? Is it easier to let someone else do it?\
+Well, was it really?\
+These are not unreasonable questions to ask of you, are they?\
+And\
+yes, we will find and have the answers momentarily.\
+You have but first to seek, ask, and you shall find. The answers are\
+inside you.\
+How many times have you heard that? We are going to\
+explore why that is so.\
+You are going to discover, actually rediscover,\
+you.\
+What do you want? If you have what you want, what else do you\
+want.\
+If you do not have what you want, why not? If you do not\
+know what you want, why not?\
+THE W BOOK\
+9\
+THE W BOOK\
+\
+--- PAGE 20 ---\
+\
+Thoughts Are Things. 3\
+Thoughts are things. Thoughts are real.\
+Have you ever listened to your thoughts? In case you are wondering\
+how to do that, let me tell you that you can both see and hear them.\
+You do that through the words you use, those you speak and write.\
+Especially those you write, for they usually take more time to\
+formulate.\
+We are always attempting to find just the right words.\
+Thoughts and ideas are real. An idea becomes physically real when it\
+becomes tangible.\
+The inventor's prototype is the result of thoughts,\
+trial and error, just before it becomes usable.\
+Prior to that it was just a\
+dream. We all dream.\
+We all have ideas that work when we put more\
+energy into them by testing them.\
+We begin by speculating about\
+"what if" and then we test it until we get it right.\
+Thoughts and ideas\
+are real.\
+Look around you. Any and everything you see, whether man-made or\
+natural, is an idea from man or Creator.\
+Everything began as an idea.\
+Ideas and thoughts do manifest.\
+When spoken, thoughts gain energy\
+and vibration and are more powerful.\
+If you believe you CAN'T it's guaranteed you WON'T.\
+Now how do you listen to your thoughts? By paying attention to the\
+words you use. For example;\
+how many times have you heard\
+yourself use the word "can't"?\
+How many times do you hear other\
+people use the word "can't".\
+When you use "can't" in whatever\
+context, if you believe you "can't" you won't.\
+If you listen carefully,\
+when you use the word "can't", you sometimes mean something else.\
+Again depending on the context, if you say "I can't", you sometimes\
+mean that you don't want to.\
+And it is just easier to say "I can't."\
+Get your "BUT" out the way!\
+"BUT" is another word we use which is misleading and can prevent us\
+from realizing what our thoughts are reflecting to us.\
+We use "but" so\
+often we are hardly aware when it crops up.\
+It usually occurs between\
+two thoughts, and erases or diminishes the first part of the statement.\
+For example: a boss might say to a person who is working for her,\
+"Sally, I like your style of greeting people. It shows you are caring,\
+but you are spending too much time away from the project so I'll have\
+to dock you for the time away from your desk."\
+What Sally, hears and\
+remembers is that she not getting her work done.\
+The compliment on\
+how well she cares for people is lost!\
+Or when we are talking about ourselves and we might hear ourselves\
+say something like;\
+"Gee, I would really like to go with you to the\
+mall, but I have a report that I must finish tonight."\
+On the surface, it\
+makes sense and sounds reasonable. The person to whom you are\
+speaking may hear and feel that you simply don't want to be bothered\
+with them.\
+The word "but" emphasizes what comes after and usually\
+THE W BOOK 10 THE W BOOK\
+\
+--- PAGE 21 ---\
+\
+Thoughts Are Things. 3\
+diminishes what was said before its use. We have a tendency to\
+dismiss others by sometimes saying, "I know what you mean, but..."\
+We completely negate and dismiss the other person and his or her\
+comments.\
+Stop "SHOULDING" on yourself!\
+How many of you have ever been "should" on. It happens almost\
+before we know it.\
+It usually comes after we have (sometimes\
+regretably) asked advice of someone.\
+They inevitably say something\
+like: you should have done this or that or the other, or you should not\
+have done or said such 'n such.\
+Usually the person doing the "should-\
+ing" is speaking from their set of values, not yours.\
+IF, if, if only!\
+Another one: "IF". If only I had only known. "If I had been aware."\
+I\
+know I can if such and such happens. "IF" always provides the\
+perfect excuse, especially when used in conjunction with then.\
+If...\
+then... and its done or not.\
+Try not to TRY!\
+Try this experiment between you and another person. You will need a\
+pencil or pen.\
+You as the experimenter say to the other person; " You\
+have three chances to do what I am going to ask you to do".\
+Place the\
+pen between you two on the table. Then say: "I want you to try to\
+pick up this pen."\
+If they pick up the pen, take the pen from them and\
+replace it on the table again and say to them, "You have two more\
+chances to try and pick up the pen. Try to pick up the pen."\
+If they\
+pick up the pen again, take the pen from them and replace it on the\
+table and say to them.\
+"Last chance, try again." If they pick up the\
+pen again, take the pen from them, replace it on the table.\
+Say, "Let me demonstrate how to 'try' to pick up the pen."\
+Simply\
+pause with one hand extended over the pen, then say "I'm done." To\
+try is not to do anything.\
+You either do it or not. You of course, must\
+give the preceding instruction exactly.\
+If at anytime the person pauses\
+and announces they are done, they've succeeded and passed the\
+experiment.\
+To "try" does not mean accomplish. When we say we\
+will try, what do we mean?\
+You can NEVER ALWAYS!\
+Two words I have eliminated from my vocabulary are "always" and\
+"never".\
+There will never be a situation that will always come out as\
+expected and there will always be a situation that will never come out\
+as expected.\
+They cancel each other.\
+THE W BOOK 11\
+THE W BOOK\
+\
+--- PAGE 22 ---\
+\
+Thoughts Are Things. 3\
+Alternative Replacement Words\
+As you can see, thoughts as words can be very revealing.\
+And what\
+has my list of words revealed to you?\
+Well first let's look at what\
+happens when we replace the culprit words with alternatives:\
+Words to Avoid\
+Change to\
+But\
+And\
+Inhibiting\
+Can't\
+Should\
+Would\
+Could\
+If\
+Ought to\
+What if\
+If...then\
+Always\
+Never\
+Can, May\
+Will, May\
+May not\
+No, May, May not\
+Yes, May not\
+I may\
+Choose\
+I have a choice\
+Almost never\
+Almost always\
+Encouraging\
+We can see that choice is encouraged as we think about how, and in\
+what context some words are used, as opposed to others.\
+What's so\
+exciting about encouraging choice? It is how we choose what we\
+want.\
+The words we use, within a context, also show us how we allow\
+others to choose for us and to what extent.\
+Our words are the clues to\
+what we think about "everything".\
+Thoughts add a new or different\
+twist to the rhyme about "sticks and stones may break my bones, but\
+words will never hurt me!"\
+Ah, quite the contrary. Words tell us how\
+and what we are thinking in any moment.\
+They also tell us what and\
+how we think of ourselves. How do they do that?\
+Problems or Challenges? It's Your Choice\
+One day many years ago, I was contemplating my futre and taking\
+inventory of my life.\
+I realized that things were not really that bad but\
+they sure could be a lot better.\
+I felt I had met every problem I ever\
+faced with all the resolve and determination I could muster and\
+succeeded overcoming them most of the time.\
+It seemed though, that\
+with each victory over any "problem" I'd turn, woe and behold there\
+would be another problem.\
+No matter how well I was able to\
+overcome those problems, my reward would be to face another\
+problem.\
+I'd discuss this phenomenon with friends and discovered that they too\
+agreed that the same things seem to happen to them.\
+There seemed to\
+always be something to address. I then began to take a closer look at\
+the problems in my life and noticed something.\
+As I began to dig in\
+and become more determined than ever to get better at solving my\
+problems, I found that a lot of these "problems" were looking an awful\
+lot alike.\
+They seemed to blend. They would involve different people,\
+THE W BOOK 12 THE W BOOK\
+\
+--- PAGE 23 ---\
+\
+Thoughts Are Things. 3\
+it was just that the circumstances seemed similar. Some situations\
+were very much alike as well.\
+Though the issues would be different,\
+they involved many of the same kinds of conflicts.\
+I would then role up my sleeves and heave to, determined and\
+resolved to conquer them.\
+I'd win the battle, surface victorious and\
+gear up to wrestle again with the next set of problems.\
+I'd win most of\
+the time and loose some of the time.\
+I was getting tired of the same old\
+stuff coming up in my life. They seemed to never go away.\
+I'd have\
+the same kind of arguments and conflicts with different people.\
+As I began to notice this repetition it dawned on me, actually hit me\
+like a ton of bricks, that it must be ME!\
+Not that I was wrong perhaps,\
+but it must have something to do with my attitude, outlook,, pproach\
+to life.\
+I read book after book about how we all are on a "path" and\
+that there are lessons to be learned in our lives.\
+And then it flashed. I\
+had been dealing with "problems"; the word problem itself connotes\
+struggle.\
+In my mind, when I replaced the word "problem" with the\
+word "challenge," omething miraculous happened. The problems\
+diminished.\
+No longer was I meeting problems head on, hoping to\
+win.\
+I was rising to meet the "challenge" of the experience and\
+looking for the lesson to be learned.\
+I could see a situation begin\
+building around me and recognized "I had been there and done that,"\
+and it was not necessary to repeat the experience!\
+Words we use determine how we deal with situations in our lives.\
+They give clues about who we are and our attitude about life.\
+Our\
+thoughts are how we decide to make choices.\
+If our words reflect how we think, then where do the predominant\
+ideals we hold come from?\
+Why do we think the way we do? How\
+did we get into this rut about believing we are making choices, when\
+in fact, for the most part, we allow others to make choices for us?\
+Think and Express\
+What we think is very important. How we think is more important.\
+That we think is most important.\
+It is what distinguishes us from\
+"other" species (as in relative, not superior), and most importantly,\
+from each other.\
+Expressing our thoughts is very important. It is how our "world\
+view" is formed and most importantly, makes us adaptive as people.\
+How much influence do our "beliefs" determine what we do?\
+Where do beliefs come from?\
+How do we know what we believe?\
+What is the difference between what we believe and what we\
+are told to believe?\
+\'95 By whom are we told to believe what? Is it our teachers, clergy\
+and parents?\
+\'95 What do we do with the contradiction and hypocrisy we find in\
+our beliefs?\
+Experience supports and emphasizes what and why we believe.\
+THE W BOOK\
+13\
+THE W BOOK\
+\
+--- PAGE 24 ---\
+\
+Thoughts Are Than 3\
+Factors Forming Our Beliefs and Attitudes\
+Geography:\
+The first and most obvious is geography Where on the planet\
+you were born.\
+There are over five and a half billion of us on the\
+planet.\
+Why we believe differently is most influenced by\
+geography.\
+Environment:\
+Most basic climate, tropical to frigid, determines dress and the\
+importance and use of raw materials, including the kind of\
+shelter and foods that are the most staple for us.\
+\'95 Culture:\
+Depending on the location and period of any given history of a\
+people, you can examine and determine how, what, and who\
+influenced the social, religious, political, and economic (haves\
+and have-nots) bent of a culture Language is one of the most\
+important factors that determine how ideas are held and passed\
+on from generation to generation\
+\'95 Heredity:\
+Or biological and hereditary influences of an individual. Their\
+intelligence (depending on who is doing the measuring and by\
+what standards) and amount of education influences their\
+beliefs.\
+Generally, these are the major factors that influence how we think and\
+what we believe.\
+For example, observation shows that the major\
+religions all have more things in common than different.\
+They have a\
+deity, a savior or avatar, a creation story, a moral about life and death,\
+a revelation, and a holy book.\
+And they all believe that their religion\
+is the only one that is right!\
+In my opinion, they are right-from their\
+point of view\
+Experiences, What Good are They?\
+And so you might say we believe what we believe by the "accident" of\
+our births.\
+We continue to believe what we believe by what we\
+experience.\
+We then struggle with our beliefs as we think about them\
+And how they may contradict themselves as we attempt to apply\
+them.\
+And how, in order for us to believe what we believe, we must\
+deny others their beliefs in order to sustain ours.\
+What a dilemuna!\
+What do our "experiences" do for us?\
+Are they just there?\
+Do they just happen?\
+Are they meant to teach?\
+It depends on how you approach your life. If you see only problems\
+you may miss the challenges of an experience as an opportunity to\
+learn a valuable lesson, and then you are doomed to repeat them.\
+You\
+may feel that your beliefs are confirmed by what you experience.\
+1114\
+W\
+\
+--- PAGE 25 ---\
+\
+Thoughts Are Things.\
+3\
+Quite the contrary! You first believe, then experience and confirm\
+what you believe.\
+If you do not like your experience you can ask,\
+"Now what"?\
+Your experiences point to give you clues to what "your reality" might\
+be.\
+I intentionally said "your reality" as opposed to "reality". The\
+only reality that matters is yours!\
+It does not mean that there is not a\
+"reality." You as an individual, define what "reality" is.\
+You as an individual create your reality, just yours. Yes, it is relative\
+to everyone's beliefs, and there can only be discussion and agreement,\
+deliberate or otherwise.\
+Let's take a closer look at how this happens.\
+Your Thoughts Create Your Reality\
+Thoughts are things. Ideas manifest. Ideas and thoughts become real\
+as they manifest.\
+We are a product of our beliefs and attitudes The\
+experiences we have reflect those beliefs/attitudes, and reinforce\
+them.\
+Consciously or not, we create our reality by what we think.\
+Relative to changes, we keep our beliefs and realities or replace them,\
+relative to what we want.\
+Our thoughts help form who we are.\
+You are what you think. And to the extent you "buy" into what others\
+think of you, you are that too.\
+If there is agreement on your part, ok; if\
+not, then you have something to work on.\
+What you think is reflected\
+by what you believe, along with where you were born, your culture,\
+biological make up, society, religion, and other environmental factors.\
+Thoughts\
+YOU\
+Beliefs &\
+Attitudes\
+THE WOCK 15\
+BOOK\
+THE W BOOK\
+\
+--- PAGE 26 ---\
+\
+Thoughts Are Things. 3\
+The experiences you have are yours.\
+Whatever your perceptions are, they are uniquely yours because you\
+are unique.\
+That does not mean there is not agreement with others.\
+Most of the time, we are more concerned as to how we do not agree,\
+without knowing why.\
+Our experiences reflect and reinforce our\
+beliefs. We create our reality, consciously or not.\
+Thoughts\
+YOU\
+Beliefs &\
+Attitudes\
+Change affects us.\
+Experiences\
+Unconscious\
+Reality\
+Change is all around us. No matter how we might attempt to stall or\
+forgo change, change happens.\
+Change happens inside of us. We are\
+growing. We grow older, we believe, everyday.\
+We grow wiser, we\
+believe, with age. We learn from mistakes or repeat them.\
+There are\
+changes beyond our control, we believe. There are simply things we\
+can do nothing about, we believe, and our experiences prove it!\
+Thoughts\
+Change\
+Pro-Active\
+YOU\
+Beliefs &\
+Attitudes\
+Re-Active\
+Experiences\
+Unconscious\
+Reality\
+Something else about change; it provides opportunity. There is a\
+connection to the experience of something, and how it affects us.\
+How\
+do we know how it affects us? We know how it affects us by how it\
+"feels".\
+Notice how we are always more willing to repeat an\
+experience if it felt good. We avoid experiences that are unpleasant.\
+THE W BOOK\
+16 THE W BOOK\
+\
+--- PAGE 27 ---\
+\
+Thoughts Are Things. 3\
+Feel Your Feelings\
+For the most part we do not notice our feelings, or when we do\
+acknowledge them, we discount them.\
+They get in the way of the\
+logic of the situation. Feelings are not considered as important as\
+thoughts.\
+Feelings are viewed as one of the major differences between sexes.\
+For example, some believe that women are always emotional and\
+therefore do not think well, especially under pressure.\
+Therefore,\
+women are not considered capable in some positions. "What! - a\
+woman President? No way!", some will say.\
+Stereotypes are based on\
+beliefs reinforced by the "created experience or reality" and then\
+espoused as "truth".\
+This is all because we tend to ignore feelings.\
+Example: how many of you have engaged in a conversation, and\
+whatever the topic, stopped yourself from saying something you felt\
+you might have, and just didn't.\
+No matter what you might have said,\
+it was prompted by what you felt about what you heard.\
+You "bit\
+your tongue" not to hurt feelings. You didn't say what you felt\
+because you feared what others may have thought of you.\
+Perhaps the price you paid for not saying what you felt was an upset\
+stomach, or you were completely misunderstood, or the wrong\
+assumption was made.\
+At any rate you find your feelings escalating\
+regarding the situation, and you feel totally ignored.\
+Stuff Them and Suffer\
+You suppressed your feelings. You did not say what you felt. Those\
+suppressed feelings become Resentment at some point.\
+Have you\
+ever served on a committee? They are wonderful creatures.\
+It's\
+interesting to watch the dynamic of how committees evolve, then\
+falter and expire without a whimper.\
+Usually when any member of a committee:\
+is not allowed to express freely\
+is cut short\
+is not taken seriously\
+is intimidated into silence,\
+is cowered into changing his mind, perhaps because he is\
+perceived as too emotional and less logical, this causes the\
+committee to falter.\
+Consciously or not, this individual will not give his total commitment\
+to the project. Let's call him Henry.\
+Henry needs to express his\
+feelings. He may even sabotage the project in order to have input to\
+the "new" solution, and thus be given an opportunity to say what he\
+originally intended.\
+THE W BOOK\
+17 THE W BOOK\
+\
+--- PAGE 28 ---\
+\
+Thoughts Are Things. 3\
+Now, why would Henry do that? Perhaps because Henry is just a\
+member and not the chairman of the committee, and feels he has more\
+expertise, he may blame the chairman for not acknowledging his input\
+as important.\
+At the same time Henry may feel guilty for not sticking\
+to his convictions and saying what he felt he needed to say.\
+Depending on some specific history, by his perception, Henry may\
+have felt that the chairman, (who, by the way is a woman; and might\
+be more appropriately, referred to as chairperson) and it stir gender\
+issues for Henry.\
+Henry feels angry at her, his perception.\
+Consequently, he reacts out of fear, and chooses not to "push" his\
+position.\
+What history could have precipitated such a response by Henry?\
+We\
+all make sense of our current experiences based on other experiences.\
+Especially if this current experience is similar in circumstance or\
+situation.\
+We then have a tendency to react or choose similarly.\
+Sometimes without thinking, out of habit.\
+Then we wonder why\
+outcomes never change, not realizing that we have done the same\
+thing time and time again.\
+Since Henry has not given voice before, he\
+may believe that he really has no right to expect to be heard this time\
+either.\
+The chairperson may be thinking that Henry has never had\
+anything to say before, and is going to go along anyway.\
+She has\
+judged and has her experiences to prove why her judgements are\
+valid.\
+Henry may even be aware that he is being judged, and judged\
+unfairly. However he continues to not say anything.\
+He continues to\
+stuff his feelings. He imagines all the ramifications of what might\
+happen if he says anything that he believes might jeopardize his job.\
+Why risk "rocking the boat"; he knows that if he can just do whatever\
+he is told, soon that promotion may be his.\
+After all, he has seniority\
+and knows more than all these "kids" they have been hiring lately.\
+Henry also knows or believes that unless he does something that\
+validates his worth (at least in the eyes of his boss) he might find\
+himself on the street.\
+That's what happen to Howard. And after all\
+Howard had done well all those years.\
+Henry is terrified the same\
+thing could happen to him. In the deepest part of himself, Henry is\
+also enraged.\
+He may not be aware of the terror or rage that is buried\
+inside him.\
+THE W BOOK\
+18\
+THE W BOOK\
+\
+--- PAGE 29 ---\
+\
+Thoughts Are Things. 3\
+Your Common Denied Feelings\
+This list typifies the denied feelings we all have exhibited. The list is\
+not complete, just the feelings primarily denied:\
+resentments\
+guilt\
+\'95 habits\
+envy\
+\uc0\u9899 worry\
+\'95 blame\
+\'95 fear\
+judgments\
+rage\
+\'95 shame\
+\'95 anger\
+\'95 terror\
+Secondary feelings are pity, sorrow, malice and revenge. With a little\
+thought and introspection, you can identify more.\
+We are aware of the results of suppressed feelings. We see it\
+everyday, every media account on radio, TV, newspaper, and\
+magazine.\
+Its called the "daily news".\
+When we look behind the headlines we see the hurt feelings, whether\
+victim or perpetrator; the violence is appalling.\
+The right or wrong of\
+it makes no sense until we question why, and seek answers.\
+Henry is typical, and there are Henriettas too, suppressing their\
+feelings.\
+The work environment is easy to relate to, if you work.\
+If\
+not, just imagine any place where there are people.\
+People are people. They all have feelings suppressed or not.\
+People\
+express who they are or not, aware of who they are or not.\
+It looks\
+like we have become what we are so used to seeing on the daily\
+evening news.\
+"We" are "They"\
+Our society reflects what we have become. We have become\
+complacent. We feel helpless to effect change.\
+I want to emphasize\
+how we view change. Who is this "we"?\
+It is the same "they" we will\
+hear ourselves blame for whatever predicament we find ourselves in:\
+YOU.\
+Each of us contributes to society. Individually we participate.\
+Individually we allow. Individually we make choices that affect one\
+another.\
+Because we ignore our own feelings, we have a tendency to\
+ignore the feelings of others.\
+It has become the norm. We don't see\
+how we can help and we do not see how we contribute to all that is\
+around us.\
+By pretending not to "see," and most importantly not to feel, we all\
+participate a little at a time.\
+We all play a part. We all have our part to\
+do.\
+We have our "part" to take responsibility for, or not.\
+THE W BOOK\
+19\
+THE W BOOK\
+\
+--- PAGE 30 ---\
+\
+Thoughts Are Things 3\
+Fixing It!\
+How do we fix anything? By rolling up your sleeves and digging in!\
+The remedy begins with you.\
+You are an individual. You are unique.\
+You are your thoughts. You are what you think. You have feelings.\
+Feelings you ignore. You are your feelings, your thoughts, and more.\
+Changing It!\
+Then how do we approach change? What is the difference between\
+being pro-active or re-active about change?\
+How much are we\
+controlled by others? We are controlled by others to the degree that\
+we allow it.\
+We allow it by abdicating choice. When we, allow others\
+to choose for us (which is a choice), instead of choosing for ourselves\
+we are allowing others to control us.\
+What do you really want and why?\
+Why are you here (where ever "here" is)?\
+What do you hope to accomplish, if anything?\
+How do you know what you want?\
+What do you think?\
+What are your thoughts on anything?\
+Your thoughts!!\
+Why do you have the thoughts you do? Where did they come from?\
+How did the circumstances of your life right now come to be?\
+Who brought you to this place and space of your life?\
+Who's fault is it, if you want to blame?\
+Who's choice was it, if you want to take credit?\
+The answer is the same, YOU! No one else. You choose, period. You\
+choose consciously or unconsciously, period.\
+To choose not to\
+choose is a choice. Non-awareness is unconsciousness.\
+Unawareness\
+or not being aware, is a choice you make; you choose not to know.\
+You choose to be unconscious.\
+No one's fault but yours. You are\
+where you are by choice.\
+How and when do we choose? In the moment.\
+Moment: a fraction of a second to eternity as you are giving\
+attention with intent and purpose.\
+THE W BOOK 20\
+THE W BOOK\
+\
+--- PAGE 31 ---\
+\
+Thoughts Are Things 3\
+The attention you give anything, is what you are thinking about.\
+The\
+intent you give those thoughts around that "thing" is what you want.\
+The computer term "garbage in garbage out" (GIGO) applies to us\
+also.\
+The intention you have, going into a situation affects its\
+outcome.\
+If you do not know what you want, and choose not to chose,\
+or allow others to choose for you, then the outcome reflects your\
+experience.\
+What Changes Would You Make?\
+If you could change anything, what changes would you make? You\
+change every moment, through and by your choices.\
+Your thoughts\
+change. Daily, you acquire new information and discard old\
+information, and act accordingly. Consciously and otherwise.\
+Your\
+reality you create. Aware or not.\
+Your awareness of your thoughts becomes clearer as you listen to your\
+thoughts by listening to the words you use.\
+As you take note of the\
+number of times you hear yourself say "I can't", you now know that if\
+you believe you can't, this guarantees that you won't.\
+If you allow\
+others to tell you, 'you can't', and you believe them, this guarantees\
+you will not.\
+If you catch yourself forming the word "can't", or even say it for that\
+matter, know that you can "cancel" any "can't" thought and replace it\
+with you can.\
+For you can do anything you choose. "Where there's a\
+will there's a way!"\
+Listened to "NEW"\
+Thoughts\
+Thoughts\
+Change\
+Pro-Active\
+Re-Active\
+YOU\
+Beliefs &\
+Attitudes\
+Experiences\
+Unconscious\
+Reality\
+THE W BOOK\
+21\
+THE W BOOK\
+\
+--- PAGE 32 ---\
+\
+Thoughts Are Things. 3\
+You are the product of your thoughts, beliefs, attitudes, experiences,\
+and how you choose in light of change.\
+The "change" you see is the\
+result of your thoughts. Change means changing from within.\
+Listening to your thoughts.\
+Understanding that you are becoming,\
+growing, and evolving every moment.\
+Understand that you have to\
+make your own choices, for if you don't, others will.\
+What is the circumstance of your life right now?\
+Are you experiencing and having everything that you could want?\
+If not, why not?\
+If you could change anything, what would it be?\
+Oh yes, you do have everything you want!\
+If we told you that you have everything in your life that you want,\
+what would you say? It's true.\
+Right now you have everything you\
+want! Everything you want, not necessarily what you have asked for.\
+You have created all that you have in your life right now.\
+You created\
+what you have by your thoughts, beliefs, and experiences. Change is\
+inevitable.\
+It's how you approach change and what it means to you\
+that makes the difference.\
+Your experiences are reflections of your\
+reality.\
+What is change and when does it happen? Why is it we generally only\
+realize it needs attention after the fact?\
+Do you actively seek change or\
+are you one who waits until it happens around you and then react?\
+What things in your life are you experiencing right now that are very\
+pleasing and you want to maintain?\
+What things in your life would\
+you rather not have as part of your life experience?\
+You are\
+responsible for it all.\
+The "how" and "why" of your experiences are as important as the\
+"who" and "what".\
+Your experience is the result of choices you have\
+made.\
+Every experience you have is the result of your making choices:\
+Your choices lead to the circumstances of your life.\
+Each circumstance contains situations that point to and contain\
+issues with which you and others will have to contend.\
+Events are the parameters around which our attention is\
+focused.\
+Events literally define the moment.\
+THE W BOOK\
+22\
+THE W BOOK\
+\
+--- PAGE 33 ---\
+\
+Thoughts Are Things. 3\
+Are you (or someone else) crossing your will?\
+To what do we give our attention?\
+Situations stem from circumstances. Our feelings help us distinguish\
+one situation from the other. Feelings we usually deny.\
+It is usually\
+after the fact that we have to pause and ask why or what just\
+happened?\
+And then you wonder why things are the way they are?\
+Your feelings around these moments offer clues as to whether or not\
+your Will is being "crossed" (denied, blocked, thwarted, etc.).\
+What\
+kind of feelings? Feelings that surface usually after the fact, they eat at\
+you or at least cause you to pause.\
+These feelings are not as obvious as\
+might otherwise be if you don't realize they are there.\
+Resentment is one feeling that\
+is typically overlooked or stuffed.\
+In the past how often have you "bitten your tongue"?\
+For whatever\
+reason, you chose not to speak up when the opportunity arose, why?\
+Now you feel that you should have, but much too late.\
+You felt you\
+should have said something instead of not saying anything.\
+You later\
+regretted not saying what you thought you might have.\
+When people\
+do this, it leads to "going along" and regretting or feeling resentful, to\
+the point of sabotaging whatever was resentfully agreed to.\
+Does life happen to you or is life something you make happen?\
+Balance is what we lack in our lives.\
+When we begin to realize that thoughts and especially feelings are\
+vastly important to our decision-making process, it will finally be\
+possible to find and maintain balance in our lives.\
+More on balance a\
+little later.\
+Love is the Key\
+A Love that has not yet been realized in Creation. Lovelessness\
+prevails. Why?\
+Because we have yet to learn to care enough about\
+ourselves.\
+THE W BOOK 23\
+THE W BOOK\
+\
+--- PAGE 34 ---\
+\
+4\
+Intent, Purpose, Balance\
+Intent, Purpose. Balance\
+4\
+You express who you are, whether aware of it or not\
+You define who you are by the ideas and truths you hold dear.\
+These\
+ideas and truths become part of who you are. When you do not define\
+yourself, others will define you.\
+And to the extent you allow it, you\
+live and believe their definition of you\
+You must express. Do so without crossing another's Will and do not\
+allow others to cross your Will.\
+This simple rule supersedes those\
+other rules that have become so distorted.\
+I truly believed that the "Golden Rule" meant what it said.\
+"Do unto\
+others as you would have them do unto you."\
+By consensus it has\
+deteriorated into: "Do unto others before they do unto you", and "He\
+who has the gold, rules."\
+There is purpose and meaning to life, and you are Life's student.\
+You\
+are here to learn, to grow, to evolve, and to love. The world is in need\
+of repair.\
+Read any headline. The things humans do to one another\
+and to the planet cannot continue much longer.\
+Each of us has a part\
+to play. Each of us contributes directly or indirectly to everything that\
+happens around us.\
+It is the direct involvement and ambivalence that\
+we must address first.\
+Just as we contribute to the lovelessness\
+indirectly, directly we can have an impact on the world when we work\
+to make better choices in our lives.\
+W24 1\
+\
+--- PAGE 35 ---\
+\
+Intent, Purpose, Balance. 4\
+To express without crossing another's Will, and not allowing anyone\
+to cross our own Will is not as simple or difficult as it sounds.\
+It takes\
+really looking at what you mean by Will and understanding what it\
+means to cross another's Will.\
+If you imagine there will be chaos and\
+utter confusion if everyone expressed their Will, you'd be correct.\
+Remember, I said you are not to allow anyone to cross your Will;\
+then\
+you might also imagine murder and mayhem. You would also be\
+correct from your point of view.\
+I have tested this rule and found that\
+it works for me. I believe it will work for you.\
+Metaphysical You\
+The Philosophy of Metaphysics demands that the individual seeks and\
+asks questions.\
+It is the search for answers about the origin of all\
+things.\
+When you embark upon such a quest you soon learn that no\
+matter what questions you ask, you will always find an answer, and\
+that answer then allows you to ask the next question.\
+You learn that\
+in order to know, you must ask more and better questions.\
+Whatever you think the answer might be, it works until you learn\
+about alternatives and other people's points of view that allow you to\
+form your own point of view.\
+Metaphysics is a broad subject. It is as broad and varied as you might\
+find people willing to offer an opinion.\
+Questions asked and answers\
+pursued vary greatly. You must assess and validate any answer to\
+any question.\
+It must make sense to you. The only limit is your\
+degree of awareness, and that too is a conscious choice.\
+It simply\
+never ends, there will always be more.\
+THE W BOOK 25 THE W BOOK\
+\
+--- PAGE 36 ---\
+\
+etant Purpose. \uc0\u1042 \u1082 \u1072 \u1087 \u1089 \u1077 \
+4\
+How to ask the "right" questions\
+This is an individual journey. Simply ask the right question. The\
+"right" question is the one that moves you forward, as opposed to the\
+one that satisfies you permanently and does not prompt more\
+questions.\
+How do you know when you are asking the right questions, and more\
+importantly finding the right answers?\
+Look at your life! Look\
+around you:\
+What do you see?\
+The people in your life: who are they to you and you to them?\
+What are your relationships like?\
+Are they to your liking?\
+Are you satisfied, happy, unhappy, joyous, or otherwise?\
+If so, why?\
+What would you change?\
+Now that you know you can have and do what you want, what\
+next?\
+We each form our reality based on our thoughts and beliefs reinforced\
+by our experiences.\
+Therefore, each of us, simply, has a point of view.\
+More importantly, each of us is entitled to whatever that point of view\
+might be.\
+Your point of view is formed by what you think, believe,\
+and experience. Until challenged, it may remain significantly\
+unchanged.\
+After all, who are you to attempt to "change" someone. All you have\
+is your point of view.\
+We each form our reality by what we think.\
+When our points of view match or we agree, then to that degree does\
+our view of reality agree.\
+We have limited agreement and therefore it\
+seems like the same reality.\
+It is the same only as we agree it is,\
+because we all have a different set of lenses through which we not\
+only see the world, but "see" the world, we can see with more than\
+our eyes.\
+Who wins?\
+There will always be at least two points of view expressed no matter\
+what the question or the relationship between the questioners\
+Depending on the seriousness of the question and degree of conflict,\
+the outcome can be predicted.\
+He who has the gold will win, or the\
+first who willingly gives up his or her Will (aware or not), will lose.\
+1128\
+11\
+\
+--- PAGE 37 ---\
+\
+ment , Barance 4\
+Which "you" are "you" with another?\
+Imagine any aspect of your life in which you have had to deal with\
+someone else;\
+parents, spouse, significant other, children, a complete\
+stranger, you were, and will always be the common denominator.\
+Now this may seem obvious to you. Let me ask you:\
+Which "you" are "you" when you are with any of those other\
+people?\
+Which mask do you wear when and with whom?\
+Do you wear a mask at all? If you don't, do the other people?\
+How do you know for sure if they are or are not wearing a\
+mask or presenting a facade?\
+And in relationships...\
+Are you the same "you" in the beginning of that "new"\
+relationship as you are when you break-up?\
+Are you the same "you" after all these years with whom you're\
+with now, as then?\
+Are they the same?\
+When do either of you decide you no longer need to "put your\
+best foot forward"?\
+Is it when you feel safe enough to be who you "really" are\
+without Fear of being rejected?\
+Or is it when you don't care if you are rejected, because you\
+want "out"?\
+Do you now have some idea of the great volume of misunderstanding\
+and pain which has occurred between people who have never had a\
+chance to express their feelings in relationships?\
+How many people\
+pretend? How many people do you know who are absolutely happy\
+where they work and are absolutely happy in their intimate\
+relationships?\
+Probably very few!\
+Fifty percent of people who marry, divorce in less than five years.\
+What does this say of the 50% who are still married and don't want to\
+be, but stick it out for whatever reason?\
+Their marriage is not what\
+they really want, and they stay for reasons not their own.\
+Why do people work where they don't want as evidenced by their\
+attitude and actions?\
+Why do people stay in relationships they don't\
+want as evidenced by their infidelity?\
+W\
+2711\
+\
+--- PAGE 38 ---\
+\
+tumt, Purpose. Ganence 4\
+Recognizing when your WILL is being crossed!\
+When you suppress your feelings you are crossing your own Will\
+When you allow other people to cross your Will, you usually feel in\
+your gut that what was spoken or done does not feel "right" When\
+you are used to suppressing and ignoring your own feelings, it is easy\
+to allow others to suppress and ignore your feelings or cross your\
+Will.\
+Until you become aware of and acknowledge your own feelings\
+about everything, you will continue to cross your Will and allow\
+others to cross your Will.\
+During a conversation, for example, when\
+you recognize you're feeling resentful about what is being said or\
+done, your Will is being crossed.\
+When you deny your feelings, you feel guilt, blame, fear, anger, act\
+out of habit, judge heavily (yours and others), and eventually suppress\
+a lot of rage and terror.\
+This is what imbalance looks like. I have\
+spoken of Balance.\
+Creator's Four Aspects\
+Earlier we mentioned our view Creator. That All of Creation is part of\
+Creator. That we are part of Creator.\
+If this unseen force is Creator\
+and is the Creator of Creation, then no-thing is left out of Creation\
+Creator then, is All That Is.\
+There are four aspects to Creator: Spirit, Heart, Will, and Body.\
+In\
+some holy books, man is said to have been made in the image of God.\
+As part of Creator, All That Is, we too have these four aspects.\
+Spirit:\
+Consciousness. Notion of Creator, God, Goddess, All That Is,\
+Thought, Mind\
+Heart:\
+Love is Creator's Gift. You are the embodiment of that Gift.\
+You\
+have to acknowledge and then accept the Creator's Gift of Love to\
+you\
+Will:\
+Divine Will, the Creator's Gift, is not inconsistent with Free Will\
+Desires, feelings, and emotions are Free Will.\
+Body:\
+Body is Manifested Reality. Your world, your reality, what you\
+create and manifest.\
+28 11/\
+\
+--- PAGE 39 ---\
+\
+ement, Papore B4\
+BODY\
+COMMUNICATION\
+EMOTION\
+VISION/KNOVING\
+CREATIVE/SEXUALITY\
+GODDESS, GOD\
+SURVIVAL\
+ALL THAT IS\
+HEART\
+SPIRIT\
+WILL\
+These four aspects must be balanced and aligned in the moment,\
+moment to moment. As a result, outcomes are balanced.\
+No matter\
+what the circunstance, situation, or issue, you are in the middle of it.\
+Your choice is your choice.\
+Choose from a balanced place, a centered\
+place, and choose for you.\
+The outcome will be as you want, and\
+everyone benefits.\
+"Centered" we said. Thoughts and feelings must be acknowledged.\
+Heart is your Balance Point.\
+Unconditional Love (True Love) has\
+never existed on the planet as intended.\
+Unconditional Love (True\
+Love) has not existed because of the predominance of imbalance. We\
+have always denied our feelings.\
+Resentment, envy, guilt, blame, fear,\
+anger, habit, judgment, rage and terror have always been suppressed.\
+There has been no acceptance for their expression.\
+Learn How to Balance and Align\
+Balanced choices occur in your heart. The first step towards this is to\
+first love You.\
+To love You, you must accept you. Only when you\
+love yourself, can you give love to anyone else.\
+To know and\
+understand yourself allows you to understand others. To allow others\
+their Will is to claim your Will.\
+To express who and what you are\
+without crossing another's Will (or allow your Will to be crossed) can\
+only happen in Love.\
+Make the choices you feel will be for your highest and best good.\
+When you do so, it will be for everyone's best interest.\
+Making\
+chowes short of your highest good, means you are allowing someone\
+else to choose for you.\
+By nature they will make the choice best for\
+them, not you.\
+You are the only one that can do that.\
+W\
+29\
+\
+--- PAGE 40 ---\
+\
+Intent, Purpose. Balance 4\
+Choose in the moment. Each moment counts. When we attempt to\
+correct past "wrongs" we learn that we can not undo or change the\
+past.\
+There is only now and tomorrow is not promised. To what do\
+you give the most attention, yesterday or tomorrow?\
+It is determined\
+by the choices you make in the "now".\
+Balance and alignment in the moment, is important as you are giving\
+attention with intent and purpose.\
+Moments have validity when they\
+have intent and purpose, no matter the circumstance, situation, or\
+issue.\
+To have clear intent as you express, means to consider your\
+thoughts and feelings around the issue, then lovingly come to the\
+choice that is loving for you.\
+You are obligated to you, for you, and by\
+you because you love you.\
+Responsibility means having, taking, and\
+exercising your "ability to respond". Accountability means making\
+your choices "count".\
+The words we use are our reflected thoughts. When we learn to hear\
+and listen to our thoughts we will learn to recognized when our Wills\
+are being crossed.\
+When you hear words such as should, ought and\
+but; they signal denial;\
+they signal that the Will is being crossed. Our\
+choices lead to decisions and actions we take.\
+They set the route and\
+direction of the outcome.\
+Remember that being still and doing nothing, can be an action and is\
+sometimes appropriate, as long as there is a purpose.\
+Action comes in\
+many forms. Just know that you do what you do with a purpose in\
+mind.\
+"Balance and alignment" means to look at your life; if you\
+conclude your life is simply imbalanced, how do you balance it and\
+why?\
+When you make the decision to live your life lovingly, it is the\
+beginning. Do it moment to moment.\
+Live each moment with the\
+intent to align. Once attained, maintain the balance moment by\
+moment.\
+Each moment holds your attention on a circumstance. How\
+does that moment feel? Feelings help define the moment.\
+Your Will\
+(Feelings) lets you know when and if your will is being crossed, by\
+how you feel in that moment.\
+Just as we are learning how to listen to\
+our thoughts, we can, now begin to understand and feel our feelings.\
+THE W BOOK 30 THE W BOOK\
+\
+--- PAGE 41 ---\
+\
+Listened to "NEW"\
+Thoughts\
+Thoughts\
+Change\
+Pro-Active\
+YOU\
+Re-Active\
+Beliefs &\
+Attitudes\
+Pro-Active\
+Change\
+Balanced\
+Intent, Purpose. Balance 4\
+Experiences\
+Unconscious\
+Reality\
+With FEELING, embrace the moment to release the moment, to make\
+room for the next moment! With FEELING!!\
+Feel your feelings. Go\
+with the emotion of the moment.\
+Vent (Move) Your Feelings as Needed\
+If necessary move to a safe place, and vent. Remember that you are\
+not to harm yourself or anyone else.\
+The objective is to release the\
+feelings. If the feelings involve anger or rage, vent without harming\
+yourself or anyone else.\
+Allow the moment. Acknowledge the emotion and then release that\
+energy. Whether positive or negative, be in that moment.\
+Know your\
+intent. In that moment ask yourself what do you really desire?\
+Your\
+next choice precedes what action you take. Make it count.\
+You always have a choice. You always choose, even when you choose\
+not to choose.\
+Why let others choose for you? Do they have a better\
+sense of what you want?\
+Why risk or allow someone else to make less\
+than the best choices for you?\
+How to stop making "Inappropriate cholces"\
+Sometimes we have difficultly realizing how a situation came to be.\
+We look around and ask how could this be happening to me?\
+When\
+you find yourself asking such questions, attempting to get a handle on\
+the "why" of the situation, know that you are in part responsible.\
+You\
+made the choices that brought you to that moment.\
+Especially the\
+choices you gave to someone else to make for you. And now you get\
+to choose again!\
+To stop "jumping out the frying pan into the fire",\
+examine your thoughts and feelings around the moment, then lovingly\
+choose for your highest and best good.\
+THE W BOOK\
+31 THE BOOK\
+\
+--- PAGE 42 ---\
+\
+Intent Purpose. Balance\
+If there still is confusion, or if you make an inappropriate choice,\
+that's ok! Why?\
+Because you get to choose again! And again and\
+again. You are always making choices. That's the saving grace.\
+Choose and accept full responsibility for your choices, remembering\
+you get to choose again if you don't like the outcome.\
+Make your\
+choices count!\
+How to stop making "inappropriate choices in your life? Assess\
+where you are right now. Look at the situation and ask yourself:\
+"What would a person have to believe to accept this\
+condition, this predicament, this situation willingly?"\
+4\
+This exercise gives you clues on how to change your life.\
+If the answer\
+to that question feels good, makes sense, and is loving, accept it.\
+If the\
+answer does not feel good or loving to you, make another choice!\
+Do not deny your feelings. Feelings are here to help you choose\
+appropriately.\
+Choose in the moment, as you are giving attention\
+with intent, loving intent. You must have love to give love.\
+W321\
+\
+--- PAGE 43 ---\
+\
+Meditation & Yeer Chakra System B\
+5\
+Meditation I Your Chakra System\
+How to Meditate\
+Meditation is how we make sense of our personal worlds. It helps us\
+relate to ourselves.\
+Meditation is the basis of Metaphysics. It is the\
+"going inside" ourselves to find the answers to our questions.\
+Meditation is ancient. Meditation is practiced throughout the world.\
+It has many forms, active and passive.\
+Common among those who\
+meditate is a reverence toward oneself and a notion of "Creator or\
+God"\
+While related to prayer, meditation differs this way. Prayer is\
+"speaking" to God.\
+Meditation is when we "listen" Preparing to\
+meditate involves several things: a time, place, and "cleared space"\
+\'95 We recommend you set aside a time that is quiet, like early\
+morning, between four and six, when the city is relatively quiet.\
+This is like making a regular appointment with you.\
+\'95 Choose a place that is readily available, comfortable and free of\
+clutter.\
+A comfortable chair, made of wood and straight backed.\
+By "cleared space" we mean cleared and ready to use by you.\
+We\
+recommend that you sit, feet flat, palms down in front of you\
+Begin to clear your space with a prayer that clarifies your intent to\
+connect with energy that is only for your highest and best good\
+and that you be kept safe trom any harm or danger.\
+11/33\
+11\
+\
+--- PAGE 44 ---\
+\
+Meditation & Your Chakra System. 5\
+\'95 Relax and begin to breathe slow deep breaths. As you breathe\
+relax each muscle group, head to toe or vice versa.\
+Once\
+completely relaxed begin breathing in rhythm by counting: inhale\
+for a count of two, exhale for a count of four;\
+then when\
+comfortable, inhale for a count of three and exhale in six counts.\
+Soon you won't notice your breathing.\
+Quiet your thoughts and\
+begin to listen, feel or sense what you are receiving.\
+In the beginning the greatest benefit may simply be that you are taking\
+time out for you to relax.\
+Read and study information on meditation\
+or join a meditation class.\
+These will all help you to find the\
+meditation that is correct for you at this time.\
+As you keep your\
+appointment with you and ask for the help you need, it will come.\
+You will begin to feel differently as you regularly sit in meditation.\
+Changes will occur in your body.\
+After meditation, you will\
+increasingly experience a flow of energy and a feeling that you're\
+being energized through the balance of your day.\
+We are energy. Matter is made of molecules. The spaces between\
+molecules are proportional to the spaces between the stars in the sky.\
+There are four states of matter: liquid, gas, solid and energy.\
+Energy\
+fields are made of positive and negative charges, both electric and\
+magnetic.\
+Medicine too, is always discovering new and exciting phenomena as it\
+probes and searches for answers to the perplexing intricacies of how\
+the body works.\
+Doctors and scientists are learning the connection\
+between mind and body.\
+In your study of Metaphysics you will be introduced to a concept of\
+energy regarding the body.\
+The Sanskrit word "Chakra", means\
+"circle of energy, or wheel of energy".\
+There are circles of energy or\
+Chakras" in and around all bodies. You will have to explore and test\
+this hypothesis for yourself and we will simply introduce you to the\
+concept.\
+Through meditation, we have learned that there are twelve\
+major chakras. There are also twelve senses.\
+We plan to\
+discuss this information in depth in Book II.\
+We are still\
+receiving information on the connection between the\
+senses to the chakras.\
+THE W BOOK\
+THE W BOOK\
+\
+--- PAGE 45 ---\
+\
+Your Chakra System\
+Meditation & Your Chakra System. 5\
+We are familiar with seven major Chakras or energy fields in the\
+human body.\
+The First Chakra\
+is located in the tail bone or coccyx area, at the base of the spine.\
+It\
+resonates to the musical note of 'C'. It is red. It is responsible for the\
+flight or fight syndrome.\
+In emergency situations it prepares one to\
+put up a good fight or run away.\
+The Second Chakra\
+is located near the genitalia area. It resonates to the musical note "D".\
+It is orange.\
+It is the creative and sexuality center. It is directly\
+related to sexuality and our creative abilities.\
+The Third Chakra\
+is located in the solar plexus. It is the emotional feeling center. It\
+resonates to the musical note of "E".\
+It is yellow. It lets you know\
+when your Will is crossed.\
+It gives you that gut level feeling that\
+something doesn't feel right or lets you know through feeling, that all\
+is well.\
+2nd\
+Chakra\
+Genitalia\
+Coccyx\
+3rd\
+Chakra\
+1st\
+Chakra\
+\uc0\u1057 \u1086 \u1089 \u1089 \u1091 \u1093 \
+THEW BOOK 35 THE W BOOK\
+Solar Plexus\
+Genitalia\
+\uc0\u1057 \u1086 \u1089 \u1089 \u1091 \u1093 \
+\
+--- PAGE 46 ---\
+\
+5th\
+Chakra\
+Meditation & Your Chakra System 5\
+The Fourth Chakra\
+is located at the heart. It is the love center. It resonates to the tone of\
+'F'. It is green.\
+From unconditional love it expresses.\
+The Fifth Chakra\
+is located at the throat. It is the communication center. It resonates to\
+the musical tone of 'G'.\
+It is light blue. When this Chakra is operating\
+at it's maximum, you communicate easily, not only to yourself, but to\
+others.\
+The Sixth Chakra\
+is located in the forehead or brow, and is called the Third Eye. It is\
+indigo.\
+From this Chakra clairvoyance emerges. One starts to see\
+color and clear visions.\
+You seem to know that you know, that you\
+know.\
+4th\
+Chakra\
+Heart\
+Throat\
+Heart\
+Solar Plexus\
+Genitalia\
+\uc0\u1057 \u1086 \u1089 \u1089 \u1091 \u1093 \
+THE W BOOK 36 THE W BOOK\
+Solar Plexus\
+Genitalia\
+\uc0\u1057 \u1086 \u1089 \u1089 \u1091 \u1093 \
+6th\
+Brow\
+Chakra\
+Throat\
+Heart\
+Solar Plexus\
+Genitalia\
+\uc0\u1057 \u1086 \u1089 \u1089 \u1091 \u1093 \
+\
+--- PAGE 47 ---\
+\
+The Seventh Chakra\
+Meditation & Your System\
+5\
+is located on top of the head. Called the Crown Chakra, its color is\
+violet.\
+Once activated, there is a knowing that you know, and have a\
+connection with God, Goddess, All That Is.\
+This center is sometimes\
+called The GOD center.\
+These are the seven main Chakras in the body. In addition, there are\
+many sub Chakras and energy pathways.\
+Acupuncture and\
+Acupressure uses these energy locations and paths.\
+Seek Your Own Answers\
+7th\
+Chakra\
+Crown\
+Brow\
+Throat\
+Heart\
+Solar Plexus\
+Genitalia\
+\uc0\u1057 \u1086 \u1089 \u1089 \u1091 \u1093 \
+As you grow comfortable in your meditation, you ask for information\
+on the Chakras and see what response you get.\
+You may ask about\
+anything you desire answers or insight on.\
+It is paramount to\
+understand that it is YOUR answer that matters most.\
+You learn that\
+the answer to any question you ask simply leads you to ask another\
+question.\
+No matter what you think you know, there is more to know.\
+The more you know, the more you know you don't know.\
+Whenever you encounter new or different concepts or information,\
+exercise discernment. Ask and seek answers to your questions.\
+Move\
+and grow at your pace. Keep whatever strikes you as appropriate and\
+right for you, and shelve the rest, knowing that later, it may make\
+sense.\
+Yes, your thoughts, beliefs, and experiences affect how you view\
+change. You are what you think.\
+There is a connection between you\
+and your notion of "God".\
+We have given you our perspective of\
+Creator, S/He is four aspects: Spirit. Heart, Will, and Body.\
+W\
+37\
+\
+--- PAGE 48 ---\
+\
+Meditation & Your Chakra System.\
+5\
+Understanding Polarity\
+Polarity, duality, and paradox are the stuff composing our lives.\
+We\
+often find ourselves in the middle of everything, not knowing which\
+way to turn.\
+We have relationships that are wonderful in the\
+beginning, only to fall prey to confusion arising over differences of\
+opinion, or simply unwillingness to admit the other person just may\
+be right (though you realize you are right too).\
+And that's when\
+communication breaks down.\
+Polarity is, simply, that view points have a range. We generally speak\
+along a line of thought, and polarize along that line.\
+Warm, as in\
+temperature, is somewhere between hot and cold. Gray, the color, is\
+somewhere between black and white.\
+Likewise, our opinions fall\
+somewhere between the two extremes of opposite viewpoint, as in a\
+debate or argument.\
+You are entitled to your own opinion as much as\
+others are entitled to theirs, and you are both "right" from your\
+respective "points of view".\
+Without clear intent, recognizing this as\
+true for you may be difficult. Polarized viewpoints divide us.\
+And\
+because neither side can "see" the other's viewpoint, they seldom\
+communicate and therefore seldom resolve their differences.\
+The Spirit and Will aspect of us are polarized. The Spirit Aspect\
+thinks, the Will Aspect feels.\
+Both, Spirit and Will have a point of\
+view around issues.\
+Because both are "right", neither wants to give\
+in. Spirit usually wins any disagreement by overriding and\
+suppressing the Will.\
+This has become the norm.\
+As thinking and caring people, have you ever wondered what keeps\
+people apart? Why do people kill one another?\
+Why are we so violent\
+and separated along silly concepts such as politics, social class,\
+education, religion, race, language, geography, and gender?\
+Why do\
+we emphasize differences and hardly notice similarities?\
+Right and wrong, black and white, positive and negative are just\
+different ends of the same pole.\
+The balance is in the middle\
+We are part of Creation. Bibles and other holy books, say we are made\
+in the image of "God".\
+Remember, we are four aspects: Spirit, Heart,\
+Will and Body. We are energy expressing in Creation.\
+We have Free\
+Will, that is not inconsistent with the Creator's Divine Will.\
+We have\
+been given the gift of Love by our presence of Body and Mind and we\
+must honestly accept them\
+W\
+\
+--- PAGE 49 ---\
+\
+Modtan & Your Chakra Syste\
+5\
+How Our Chakras Align with Our Four Aspects\
+The attributes assigned to the seven Chakras also correspond to otur\
+four aspects.\
+In the following charts the first three Chakras #1 to #3 are\
+Will polarized or magnetic energy Chakras #5 to #7 are Spirit\
+polarized electric energy.\
+The fourth Chakra, #4 is the Balance Point.\
+the electromagnetic.\
+Chakra #7\
+Notion of Creator\
+Chakra #6\
+Vision-Know/Know/Know\
+SPIRIT\
+Chakra #5\
+Communication\
+Chakra #4\
+Love\
+\}\
+HEART\
+Chakra #3\
+Emotion\
+Chakra #2\
+Creativity/Sexuality\
+\}\
+WILL\
+Chakra #1\
+Survival\
+BODY\
+The Chakras must be felt, seen, or known to become real for you.\
+As\
+you meditate and quiet the mind chatter, ask for insight. Listen to\
+what you are given. Test it.\
+As you gain understanding, you will then\
+know. The benefit of this becomes clear as you express who you are\
+and use this information\
+As you begin to understand the attributes of each Chakra and their\
+relationship to one another and to you, you will begin to understand\
+balance and alignment.\
+As you come into balance, you understand imbalance more clearly.\
+As we ponder why things are the way they are, and more importantly\
+our role in it, we see that we need to ask better questions and pay\
+closer attention to the information we're given\
+With Heart's help, we receive clues on how to heal the imbalance and\
+separation between Spirit and Will within us.\
+Simple "polarization" is\
+the cause. Understanding this polarization helps us understand\
+ourselves and others.\
+39 11\
+\
+--- PAGE 50 ---\
+\
+Metatron & Your Chira Syntyn\
+5\
+We'd like to share the evolution of a meditation affirmation As We\
+were contemplating balance and alignment and its connection to He\
+Chakra System, we considered the imbalance abundantly observable\
+in the world around us.\
+The media continually displays this. Almost\
+any media account via radio.\
+TV, or newspaper displays that people\
+can't seem to get along\
+When we ponder our roles and begin to search, we then begin to make\
+sense of our reality.\
+When we think of balance, perhaps we see a set of scales, with each\
+side balanced or even.\
+Of the seven Chakras, the 4th Chakra (Heart)\
+rests in the middle.\
+Heart is the 4th Chakra whether you start from\
+the top or the bottom.\
+When you are balanced, Love equals life.\
+Chakras balance in Heart. The 7th Chakra and the 1st Chakra. The\
+6th Chakra and the 2nd Chakra.\
+The 5th Chakra and the 3rd Chakra\
+should balance.\
+A balanced life is one of Love. A balanced Creation is one of Love.\
+The attributes of the Chakras correspond to the Four Aspects of\
+ourselves and Creator. We are polarized and therefore imbalanced.\
+As our understanding increases we can address the imbalance in\
+ourselves and Creation\
+When the "lower" Chakras are paired with the "higher" Chakras the\
+numbers of their position add up to Eight.\
+you double Four, (Heart)\
+you get Fight\
+1140\
+\
+--- PAGE 51 ---\
+\
+Meditation & Your Chakra System. 5\
+1+7=8\
+WILL\
+2+6=8\
+\}\
+SPIRIT\
+3+5=8\
+LOVE\
+HEART\
+BODY\
+4+4=8\
+SPIRIT\
+5+3=8\
+\}\
+WILL\
+6+2=8\
+7+1=8\
+Numeral 8 turned on its side yields the symbol for Infinity. Life!\
+This relationship was pointed out to us in a meditation. Spirit and Will\
+are polarized energies.\
+The Chakras are polarized as well. Heart rests\
+between them.\
+How to Balance and Align Yourself by Aligning Your Chakras\
+As you become familiar and comfortable with these concepts consider\
+beginning everyday with the following simple, yet powerful\
+meditation.\
+After you have become relaxed and have cleared your\
+space, breath slowly and begin to visualize or feel each of your Chakra\
+centers:\
+THEW BOOK 41\
+THE W BOOK\
+\
+--- PAGE 52 ---\
+\
+Meditation & Your Chakra System.\
+5\
+1. Move PURPLE energy from the 7th Chakra out and curve down,\
+passing through the green Heart Chakra, and then continue the\
+energy (now infused with Heart energy) to the red 1st Chakra.\
+2. From the 1st Chakra, move RED energy out and up through the\
+Heart Chakra, and on to the purple 7th Chakra.\
+She (Will; 1st\
+Chakra) is acknowledging that She "heard" Spirit's overture, and\
+that what He (Spirit) said makes sense.\
+They do indeed need each\
+Other to survive. The presence of Heart allows the meaning to be\
+accepted. THE W BOOK\
+42 THE W BOOK\
+\
+--- PAGE 53 ---\
+\
+Meditation & Your Chakra System\
+5\
+3. Next move INDIGO energy from the 6th Chakra out and down\
+through the Heart Chakra to the orange 2nd Chakra.\
+And the\
+message is, "Our thoughts and visions are connected to Our\
+creativity and sexuality."\
+4. Next move ORANGE energy out and up from the 2nd Chakra\
+through the Heart Chakra to the 6th Chakra.\
+Her response is, She\
+agrees.\
+THE W BOOK 43 THE W BOOK\
+\
+--- PAGE 54 ---\
+\
+Meditation & Your Chakra System. 5\
+5. Then move BLUE energy from the 5th Chakra out and down\
+through the Heart Chakra to the 3rd Chakra.\
+Lovingly, Spirit is\
+communication, saying loud and clear that "In Heart We can balance,\
+align, and center".\
+6. Next move YELLOW energy out and up from the 3rd Chakra\
+through the Heart Chakra to the 5th Chakra.\
+She FEELS the same\
+way.\
+Visualize and feel what is happening with you as you do this\
+meditation. If there is any uncomfortableness, stop.\
+Question why\
+and listen for an answer. Then, if it feels appropriate, continue.\
+THE W BOOK\
+THE W BOOK\
+\
+--- PAGE 55 ---\
+\
+Meditation & Your Chakra System. 5\
+7. Next see the GREEN Heart Chakra double in size and strength,\
+with increased Love and particles of energy from the other Chakras\
+now in it.\
+See the other Chakras paired and sharing corresponding\
+energies. Feel what happens as you visualize this energy extend\
+and move out.\
+Hold this image and see, feel, sense, where it goes. Note any\
+impressions, confirmations or new insights you get.\
+If this experience\
+feels good, repeat it daily. If it doesn't, find out why, then make\
+adjustments and see what happens next.\
+Where is this all leading?\
+To discovery and understanding of you! Explore and test this\
+knowledge.\
+Discern the "truth" of this information as it relates to you.\
+Ask questions and seek answers, even if you are satisfied. Know that\
+there is always more.\
+THE W BOOK\
+45\
+THE W BOOK\
+\
+--- PAGE 56 ---\
+\
+Meditation & Your Chakra System. 5\
+Affirmation / Prayer\
+As a God Spark, I need You to survive,\
+and You need me.\
+My thoughts and vision connect\
+with my creativity and sexuality\
+and I say to You with\
+feeling, that in\
+Love\
+We can Balance, Align and Center.\
+SPIRIT is, knows and communicates it.\
+HEART, when accepted can then give of itself.\
+WILL must express with emotion, feeling - movement.\
+BODY intends to heal and live.\
+I WILL BALANCE, ALIGN AND CENTER FOR LIFE!\
+THE W BOOK 46 THE W BOOK\
+\
+--- PAGE 57 ---\
+\
+Balancing Spirit, Heart, Will, & Body\
+6\
+6\
+Balancing Spirit, Heart, Will, Body\
+What is the quality of your life right now?\
+Are you happy, healthy, whole and complete? Do you have\
+everything you want in your life for yourself and those you love?\
+The\
+emphasis is "everything!!" If the answer is anything but a loud and\
+vibrant YES!, then we are on the right track.\
+You CAN have\
+everything you desire, and be everything you want to be, literally,\
+completely and right now!\
+You are Spirit. You are part of All That Is. You must decide for\
+yourself the validity of this.\
+As Spirit, you continue even after\
+"death". The soul that is you is much older than you realize.\
+You\
+have lived many lifetimes. You may someday "re-member", or it\
+simply may not be necessary for you to recollect other lifetimes.\
+However if you do desire to remember, and discover past/present\
+patterns, etc., you are well on your way to significant healing.\
+If you have discovered your guides, spirit teachers, guardian angels,\
+you are well on your way to healing.\
+Each of us must do our part in\
+healing ourselves.\
+This means exploring and rediscovering Who,\
+What, and Why you are.\
+Then doing what you do, whenever and\
+wherever you are... Balanced and Aligned in love... from your\
+understanding of that place of centeredness.\
+You must express\
+without crossing another's Will, and do not allow another to cross\
+your Will.\
+Understand you do not need to take anyone's power, or\
+allow them to take yours.\
+Expressing our Will and choosing from\
+Heart will heal each of us.\
+THE W BOOK\
+47\
+THE W BOOK\
+\
+--- PAGE 58 ---\
+\
+Balancing Spirit, Heart. Will. & Body. 6\
+Death was not intended in Creation.\
+Death was a misunderstanding. Reincarnation was an attempt to\
+"correct" death that has not worked.\
+We are still denying who, what\
+and why we are.\
+Deeper knowledge is now available for those who\
+are looking and willing to examine it.\
+Introspection provides further\
+insight to properly assess truth.\
+Ultimate health is everlasting life.\
+We age, are dis-eased, and die because we have not fully understood\
+enough about life, until now.\
+We know there must be something\
+better. The life most of us lead is not working.\
+We know it is not\
+working and we desire to know why it isn't. We know the answers\
+exist somewhere.\
+We need to search for them both outside ourselves\
+and inside as well. How? The outside reflects the inside.\
+What you\
+see happening in your life, reflects what is happening inside of you,\
+relative to where you are right now.\
+Dis-ease and at-ease are relative.\
+You can have whatever you want.\
+In fact, you do have exactly what you want right now.\
+How's that? You created the reality you have now, through your\
+thoughts, beliefs, and attitudes.\
+These reflect your degree of denial\
+through all the circumstances of your life. Each situation helps you to\
+choose.\
+You know that you can cross your own Will. You often do.\
+You simply must be aware you are doing this, and decide whether to\
+continue.\
+It is your choice to continue to deny you.\
+Is your Will being crossed?\
+Are you crossing another's Will.\
+What are you feeling?\
+What are you thinking?\
+What might you do and why?\
+To deny is to contribute to dis-ease. How do you choose without\
+denying? Imbalance is dis-ease.\
+To know balance is to recognize and\
+know imbalance. Dis-ease leads to aging and death.\
+You are energy. Thoughts are energy. Feelings are energy. Love is\
+energy.\
+Among these things, we know what imbalance looks like. We\
+see it in the mirror.\
+We feel it in the morning when we awaken. And\
+after a hard day's work or whatever, we know it when we lay down at\
+night.\
+We see it on TV and in other media. The news is bad most of\
+the time.\
+All of this imbalance reflects the dis-ease of society. We are\
+society.\
+We are diseased and we all contribute until we decide\
+otherwise.\
+The choices we make ultimately lead and contribute to the\
+quality of life we enjoy or wish we did.\
+THE W BOOK\
+48\
+THE W BOOK\
+\
+--- PAGE 59 ---\
+\
+Sasanong Sprt, Wit\
+6\
+Until we know better, we choose from a state of polarized energy\
+habitually. Why?\
+Because we do not really know or appreciate the\
+feeling/emotional aspect of who we are.\
+We do not give this part of\
+ourselves the attention it deserves.\
+We are suspicious of our feelings\
+and tend to ignore them.\
+For they seem to offer little when we need to\
+make "big and important" decisions.\
+Now that you have been given certain notions, lest them. All your\
+feelings are valid and must be considered.\
+We must consider all\
+aspects of us when we make choices.\
+No matter what the\
+circumstances, situation, or issues, it all boils down to choices.\
+When\
+we consider all aspects of us before making a choice, the outcome or\
+results will be more balanced.\
+Knowing and understanding this\
+principle allows you to help you and those with whom you\
+communicate\
+BODY\
+HEART\
+SPIRIT\
+WILI\
+People are usually polarized around most issues.\
+In their minds there is only one right answer or solution, theirs.\
+There\
+are no gray areas, only black or white. For those who allow "gray "g\
+areas", the paradox can be crushing. We recognize there are points to\
+be made by both sides of the issue. Both are "right" from their\
+respective points of view. By definition, polarity is the opposite\
+extreme ends of the same thing. Unless it is recognized and\
+acknowledged, little can be accomplished as far as solutions are\
+concerned Communication usually breaks down or is unlikely to\
+Occur.\
+We see this phenomenon happening around us daily We see people\
+arguing to no avail because neither hears the other, let alone are\
+interested in settling the issue.\
+At the very least, communication just\
+breaks off\
+149\
+\
+--- PAGE 60 ---\
+\
+Balancing Spirit, Heart, Will, & Body\
+6\
+Compromise, consensus, and conformity are the usual remedies to\
+conflict.\
+They only work if there is agreement by all concerned, which\
+is not usually the case.\
+Conflict happens inside us and are reflected outside us. Real physical\
+maladies can result.\
+High blood pressure and heart conditions are the\
+most obvious.\
+Your thinking usually conflicts with your feelings,\
+often with no reasonable remedy in sight.\
+Even when we\
+"compromise" with ourselves, we usually live to regret it sooner or\
+later.\
+Our Aspects span multiple dimensions\
+We are flesh, bone, and blood. We are essence: vibratory energy,\
+electric, magnetic, and electromagnetic, including that not yet\
+discovered.\
+Science knows there is an energy field around all living\
+things, an aura.\
+Many of us sense, feel, or even see this energy.\
+Spirit\
+Heart\
+Will, Body! and whatever we have yet to\
+discover is the "stuff" of which we are made.\
+These aspects of us\
+and Creator are just that, aspects.\
+All That Is, is One, and we are One\
+with All That Is. Aspects are relevant.\
+As we understand them, we\
+will better understand who and what we are. As energy and spirits\
+manifested, we express.\
+We choose, decide, and experience life. Some\
+of us have more of one aspect working for us than another.\
+As we\
+discern and recognize this condition first in ourselves, we are able to\
+recognize it in others.\
+The more you are able to recognize your own\
+imbalance, with a desire to restore your balance, the more aware you\
+are of the moment.\
+When you make a choice, you choose generally polarized around an\
+issue, based on your thoughts or feelings about it.\
+When you are in a\
+conflict with another, the conflict evolves around yours or the other's\
+strong opinion/feelings.\
+People are generally in two major categories: they are either "Will-\
+Polarized" or "Spirit-Polarized". Which are you?\
+By recognizing your\
+polarity you are better prepared to find solutions to any dilemma.\
+Why?\
+Because you are more knowledgeable about the dynamic of\
+who and what you are.\
+THE W BOOK\
+50\
+THE BOOK\
+\
+--- PAGE 61 ---\
+\
+Balancing Spirit, Heart, Will & Body 6\
+Polarization exists when two expressed\
+views are at opposite ends of the same thing.\
+Hot/Cold, Positive/Negative respective viewpoints of a situation are\
+no different. Two or more people usually see the same thing\
+differently.\
+When you recognize polarization for what it is, you then\
+know that in order to establish balance, you need to consider the\
+"other end" of the viewpoint.\
+Thoughts and feelings are polarized. Thoughts are electric energy;\
+feelings are magnetic. We feel or think about everything.\
+We are\
+usually in conflict over which to listen, to our thoughts or feelings\
+around an issue.\
+Are You Spirit-Polarized?\
+Thought/thinking have to do with logic, cost, risk, sense of "it" as it\
+refers to an issue.\
+If you are in your head most of the time (thinking)\
+and thinking predominates how you choose, then you are generally\
+"spirit polarized."\
+Your choices then will be skewed toward Spirit,\
+imbalanced.\
+SPIRIT\
+HEART\
+WILL \}\
+THEW BOOK 51\
+THE W BOOK\
+BODY\
+\
+--- PAGE 62 ---\
+\
+Balancing Spint, Heart, Will, & Body 6\
+Are You Will-Polarized?\
+Feelings have to do with whether or not it Is "right".\
+If there is a knot\
+in your stomach the more you think about it, your feelings are telling\
+you something.\
+Or you just know you really want to do "whatever"\
+IT is, even if it doesn't, make sense.\
+HEART\
+SPIRIT\
+WILL\
+BODY\
+If you are predominately will-polarized, then feelings prevail around\
+how you choose most of the time.\
+Your choices tend to lean towards\
+Will, imbalanced.\
+How do you know which polarizations apply to you?\
+By the choice of words you use most of the time. Words reflect your\
+thoughts.\
+When confronted with conflict, especially with someone\
+else, if you find yourself using words such as "I think", or "it makes\
+(doesn't make) sense to me", or "that'll cost a fortune and you can't get\
+your money back", even though you know deep down you really\
+want that item, then you are in your head.\
+You are suppressing the\
+desire because it doesn't make sense or it would not be prudent.\
+Later, you feel guilty.\
+By listening to your thoughts around an issue, you know which\
+polarity you're leaning towards.\
+THE 'W BOOK\
+52 THE W BOOK\
+\
+--- PAGE 63 ---\
+\
+Balancing Sprit Heart Will, & Body 6\
+We all polarize around issues. We can do this unconsciously or be\
+aware when it happens.\
+We can be spirit or will polarized around\
+different issues.\
+Polarization is a state of denial if you choose not to\
+consider the other perspective.\
+You choose when to balance and align. Remember to consider your\
+Four Aspects. This becomes easier with practice. How?\
+Listen to\
+your thoughts. Hear the words you use. Are you saying what you\
+mean and meaning what you say?\
+When communicating with\
+another, are you sure you are in conflict with what they are saying?\
+What do you think or feel they mean? Are they attempting to cross\
+your Will?\
+Are you crossing your own Will?\
+Feel your feelings. Pause and allow your feelings to give you the full\
+expression of what they have to give.\
+Do it alone if necessary. Do not\
+hurt yourself or anyone else.\
+Find out why you feel the way you are\
+feeling.\
+Polarization is a temporary state. You can judge and hold a position\
+no matter what.\
+You can continue denials that keep you bound,\
+creating a reality you do not like.\
+Are You Heart-Polarized?\
+You can also be polarized toward the other aspects as well.\
+People\
+who are polarized towards Heart tend to be self sacrificing.\
+In the\
+name of "love", they will do almost anything for others.\
+They\
+righteously deny themselves for the sake of "others", no matter how\
+much it "hurts" them.\
+Love does not require sacrifice or martyrdom.\
+SPIRIT\
+HEART\
+WILL \}\
+THE W BOOK 53 THE W BOOK\
+BODY\
+\
+--- PAGE 64 ---\
+\
+Balancing Spirit, Heart, Will, & Body\
+6\
+We all polarize around issues. We can do this unconsciously or be\
+aware when it happens.\
+We can be spirit or will polarized around\
+different issues.\
+Polarization is a state of denial if you choose not to\
+consider the other perspective.\
+You choose when to balance and align. Remember to consider your\
+Four Aspects. This becomes easier with practice. How?\
+Listen to\
+your thoughts. Hear the words you use. Are you saying what you\
+mean and meaning what you say?\
+When communicating with\
+another, are you sure you are in conflict with what they are saying?\
+What do you think or feel they mean? Are they attempting to cross\
+your Will?\
+Are you crossing your own Will?\
+Feel your feelings. Pause and allow your feelings to give you the full\
+expression of what they have to give.\
+Do it alone if necessary. Do not\
+hurt yourself or anyone else.\
+Find out why you feel the way you are\
+feeling.\
+Polarization is a temporary state. You can judge and hold a position\
+no matter what.\
+You can continue denials that keep you bound,\
+creating a reality you do not like.\
+Are You Heart-Polarized?\
+You can also be polarized toward the other aspects as well.\
+People\
+who are polarized towards Heart tend to be self sacrificing.\
+In the\
+name of "love", they will do almost anything for others.\
+They\
+righteously deny themselves for the sake of "others", no matter how\
+much it "hurts" them.\
+Love does not require sacrifice or martyrdom.\
+SPIRIT\
+HEART\
+WILL \}\
+THE W BOOK 53\
+THE W BOOK\
+BODY\
+\
+--- PAGE 65 ---\
+\
+Are You Body-Polarized?\
+Balancing Spint Heart Will. & Body. 6\
+"Body-polarized" people are sometimes so "health conscious" that\
+they literally kill themselves attempting to be "healthy".\
+They give\
+little thought to other aspects of their lives.\
+They often die of heart\
+attacks despite being in reasonably good health, physically.\
+It is\
+usually their stress and denial in other areas that kills them.\
+HEART\
+SPIRIT\
+WILL\
+BODY\
+Don't be misled by these generalizations about polarized aspects. At\
+some point in our lives we all indulge in one or more of these\
+polarized states, unknowingly.\
+Now that you have some references\
+and notions, regarding this, the choices you have made up to now will\
+have greater significance.\
+Perhaps it's clearer to see that right now, the\
+"who", "what" and "why" you are;\
+equal the cumulative results of all\
+of your choices.\
+Your Goal: Be Balanced, Aligned, and Centered!\
+"X" marks the spot; you are "here" and "now." What are you going to\
+do next?\
+Let's suppose WE make one choice a minute, while awake on\
+average 16 hours each day.\
+Then 60 x 16 = 960 choices made every 16\
+hours (assuming you get eight hours sleep) each day.\
+Now we\
+certainly make more than one choice each minute, so, wouldn't you\
+want to make more balanced choices?\
+If you knew that the outcome\
+of balanced choices would be closer to creating a reality you "truly"\
+wanted, wouldn't that be even better?\
+54 THE W BOOK\
+\
+--- PAGE 66 ---\
+\
+Barancang Sprut Heart Will & Body\
+6\
+When Essence is\
+Balanced and Aligned, then your\
+Choices and Outcomes\
+will also be Balanced and Aligned\
+THE\
+55 11\
+\
+--- PAGE 67 ---\
+\
+Balanced Choice, Balanced Outcome 7\
+7\
+Balanced Choice, Balanced Outcome\
+So you think you're really doing your own choosing?\
+Because of our conditioning, we allow others to influence the degree to\
+which we make choices.\
+We do this by playing roles we assume\
+others expect us to play. In so doing, we deny ourselves.\
+If we are not\
+aware that we are playing roles, are we allowing manipulation by\
+others, or are we rationalizing our decisions after making them?\
+This\
+is tested each time our feelings give us the clue whether or not our\
+Wills have been crossed.\
+Resentments, regrets, guilts, blames, fears,\
+angers, etc, are clues which indicate our Wills have been crossed.\
+The\
+words we use also reflect this. Can'ts, buts, shoulds, and oughts, etc.,\
+give us clues that we are denying our Wills.\
+We have shown you how\
+to balance and align. We have talked about the importance of\
+listening to your thoughts and feeling your emotions.\
+You can change\
+what you do not like about your reality.\
+When you make balanced\
+choices, the outcomes will be balanced.\
+The key to making this knowledge work for\
+you is the degree of honesty you have with you.\
+Games involving "manipulation and rationalization" must be\
+recognized. It can be difficult to know ourselves when we are fooling\
+ourselves.\
+When you have experienced life enough; and know when\
+the experience is not what you want, then we begin asking questions\
+and looking for reasons things are the way they are.\
+You are the only\
+person who can know what you know and how you feel.\
+You\
+however, must be honest with you. When you continue to ignore your\
+feelings and say anything, whether you mean it or not, you are fooling\
+yourself.\
+More than likely, others will see through you. They know\
+that most of the time you do not mean what you say.\
+They know you\
+are not sure that you know what you know. They see through your\
+masks.\
+You change often, moving from one facade to another, on a\
+whim. They have little or no trust in you.\
+THE W BOOK 56 THE W BOOK\
+\
+--- PAGE 68 ---\
+\
+Balanced Choice, Balanced Outcome.\
+When you decide to embark seriously upon this path of personal\
+discovery, in order to really see yourself, you must be available to be\
+seen.\
+You must release any recrimination you may have about what\
+you have been or have done.\
+And be willing to forgive you. You are\
+the only one who can do that, honestly.\
+Once you have forgiven you,\
+you can then take responsibility for you and the next decision you\
+make.\
+You begin to choose in the moment, balanced and aligned.\
+Honestly come to grips with yourself and truly commit to you.\
+Creating a balanced life begins with genuineness with yourself. With\
+your acceptance of you, you will be able to have integrity.\
+It is your\
+honesty, authenticity, and genuineness with you that reflects the\
+reality you create.\
+Why the emphasis on you?\
+If you do not care about you, how can you expect others to?\
+If you are not relating to you honestly, how can you expect\
+others to?\
+\'95 If you are not honest with you, how can you know or expect\
+honesty?\
+The Creator's gift to us all is Life and Love\
+7\
+That gift of life, Her/His Love, is in the form of You.\
+You need but\
+accept that gift, Life, Love - You. You accept you. You love you.\
+You\
+can not give what you do not have. To give love, you must have love.\
+You have love when you accept the Creator's gift of Love, You.\
+Once\
+you have accepted you, forgiven you, are honest with you, then as you\
+make balanced choices, you are sharing that gift of Love, You, to\
+others, just by being you.\
+WHEN\
+CAN\
+L\
+YOU\
+V\
+E\
+ONLY\
+THEN\
+When you Love You,\
+only then can You\
+give Love\
+GIVE\
+Love is Life!\
+THE W BOOK\
+57\
+THE W BOOK\
+\
+--- PAGE 69 ---\
+\
+8\
+Balance and Alignment\
+Balance and Alignment.\
+8\
+Let's look at balance and alignment\
+The concepts of Spirit and Will are polarized and rest on either side of\
+Heart. Love is where balance occurs.\
+As we choose around any\
+situation or issue we must consider all Four Aspects of who we are.\
+Body is how choices are carried out, and it reflects our view of reality's\
+outcomes.\
+As you consider the thoughts you have around an issue, listen to your\
+thoughts and concurrently feel your feelings Begin to balance around\
+the issue by thinking about your feelings and feeling your thoughts.\
+You do that by moving through Heart as you decide what would be\
+best for you.\
+You might think that it would lead to complete chaos\
+and anarchy if everyone exercised their own Will, my question is what\
+do we have now?\
+Remember that you are also obliged not to cross\
+another's Will or allow anyone to cross yours.\
+As you learn more about balance and alignment and aspire to live that\
+way, you will learn that you increasingly make more balanced, loving\
+decisions, and everyone benefits.\
+As you interact with others, do not\
+allow them to give away their power to you.\
+Show them how they\
+must own their choices, as you do, moment to moment.\
+As you give attention to your thoughts and feelings, balancing them\
+through Heart, and choosing accordingly, you contribute to your\
+healing and the healing of Creation.\
+THE W BOOK 58 THE W BOOK\
+\
+--- PAGE 70 ---\
+\
+Balance and Alignment.\
+8\
+You will learn to distinguish between your denials and the denials of\
+others. As you heal, you help others heal.\
+As you apply what is being\
+given here, and come to your own process, you grow in\
+understanding and appreciation of your part in Creation.\
+Your Body is a Living Miracle\
+We have shown you the connection to balance and how it relates to\
+the Chakra System.\
+There is also a connection to the physical body\
+systems; the Metaphysical and Physiological Connection.\
+Physiologically, we are a miracle. There is more that we don't know\
+about the human body than what we do know.\
+In our quest to\
+discover who we are and why we are here, we ask many questions\
+and are led to many answers that seem to just lead to more questions.\
+The Healing arts and ancient esoteric teachings facilitate\
+understanding and appreciation of ourselves.\
+The "stuff" of which we are made is more than we may have ever\
+imagined-and-it is exactly as we have imagined.\
+There is a macro\
+cosmology and a micro cosmology. We are connected to both. "It" is\
+all the same!\
+The finite and the infinite is in each of us.\
+You determine\
+what and how much of it you choose to investigate.\
+Biology gives us some understanding of how we are put together.\
+The\
+"body" is composed of many systems: the muscular/skeletal,\
+nervous, respiratory, cardiac, digestive, reproductive, endocrine and\
+excretory, etc.\
+These major systems miraculously work together to sustain our lives.\
+We have learned how to use herbs and medications to prolong life,\
+combat disease, and heal injuries.\
+We have learned how life-style has.\
+an affect on our general health.\
+The healing arts have a positive effect\
+on battling disease, illness, or injury.\
+As individuals, we have the\
+greatest involvement in both, the condition of our health and our\
+susceptibility to disease.\
+THE W BOOK 59 THE W BOOK\
+\
+--- PAGE 71 ---\
+\
+Balance and Alignment. 8\
+The Chakra System correlate to the major Body systems and its\
+functions. This helps us better understand how we "work."\
+\
+There is a connection to balance and imbalance, dis-ease (as we\
+have given it context) and function and dysfunctions in the body\
+and mind.\
+We have associated Chakra and Organ/Function. The attributes of\
+each Chakra is reflected in the function of the corresponding part\
+of the body and its functions.\
+Mysteries of how the body truly works will likely baffle us for\
+quite some time.\
+We are certain that in time, the body will reveal\
+answers to some of our most troublesome questions.\
+This happens\
+in ways that will surprise us as we become more familiar and\
+comfortable with how the body "speaks" to us.\
+THE W BOOK\
+60\
+THE W BOOK\
+\
+--- PAGE 72 ---\
+\
+Balance and Alignment. 8\
+Catch a "warm" or a "cold", it's your CHOICE\
+The DNA holds secrets we have yet to unravel. Cells are the building\
+blocks of the organs.\
+Tissues are formed from cells that carry out\
+specific functions.\
+We believe cells are intelligent and we can\
+communicate with them directly.\
+Not only that, but cells attempt to\
+communicate with us directly.\
+Where might this line of questioning and reasoning take us?\
+Why are\
+we so fervent, in our search for cures to disease? What does even\
+posing this question imply?\
+We desire to live healthier, don't we?\
+Why? Because life without health is often not worth living.\
+Health is\
+relative isn't it?\
+Because ill health exists, then so does healing. Healing implies cures\
+for all ills.\
+Would it then follow that if we knew where ills came from,\
+therein might lie clues as to their cures?\
+What if we could prevent all\
+disease? What do illness and diseases have in common?\
+Is there\
+something we can find that gives us some indication as to how and\
+why we are sometimes ill.\
+Germs, bacteria, virus, injury and accidents\
+are blamed as the cause of ill health.\
+Why is it that some well known pathogens only affect some of us, and\
+that not all known cures cure all of us?\
+We are all affected by some\
+malady at some point in our lives, because we are in and a part of the\
+ecosystem of the planet.\
+We affect and are affected by other things;\
+plant, water, animal life and their ecosystem as we currently\
+understand them.\
+The more we seem to understand, the more we\
+understand that we don't know nearly enough.\
+We all get opportunities to experience "the common cold". Why don't\
+we have a cure?\
+When my daughter was very young she would come\
+down with the sniffles, and as I would hold and comfort her, she'd\
+start to give me reasons how she might have "caught cold".\
+Then I\
+would ask her, "now why would you do that?"\
+She would then give\
+me an incredulous look which said, "how could you ask such a silly\
+question?"\
+Then she would smile, cuddle closer, and take her\
+medicine.\
+We know that most medicines for colds don't work, or at least not fast\
+enough.\
+The best cures are rest, soup and liquids, and in a few days\
+it's gone.\
+THE W BOOK\
+61 THE W BOOK\
+\
+--- PAGE 73 ---\
+\
+Balance and Alignment. 8\
+What if we have a part to play in our "catching colds"?\
+Not only that,\
+suppose we have a part in all that happens to us?\
+Suppose every time\
+you made a choice, it took you in a direction leading to certain\
+"experiences", including illnesses?\
+What if everything you experience is "brought to you by you"?\
+What\
+if each choice you made led you down a path and then into contact\
+with your experience?\
+As a result, this lets you get a chance to choose\
+again so you can go to the next "experience".\
+What are the\
+ramifications?\
+Others may or may not be ready to contemplate such a possibility.\
+But\
+what if each experience was meant to show you something? What if\
+you were supposed to remember something?\
+Based on certain choices\
+you make, what if you unknowingly create opportunities to become\
+"more" aware than you are?\
+III health and disease are a way through which we learn\
+How can anyone learn from cancer? I recall saying to colleagues at\
+lunch one afternoon, how terrible it was that a fellow co-worker\
+contracted cancer.\
+A headline in the local paper mentioned a new\
+detection device for discovering certain cancers.\
+I said to Carl, "How\
+ironic that 20 years ago we hardly heard of or even knew how many\
+kinds of cancers there were! Now we know that they affect us all\
+differently. In fact, we can literally pick the kind of cancer we want".\
+The look he gave me seemed to ask if I was out of my mind.\
+I\
+continued, "Now, 20 years later, by virtue of your life style, you can\
+pick the cancer you want".\
+He looked at the unlit cigar he was\
+holding and changed the subject.\
+As previously noted, there are things we do that lead to the\
+experiences we have, and these experiences become lessons for our\
+growth.\
+Now why would anyone create sickness? They might if they\
+did not know that they create all the "experiences" in their lives.\
+The\
+choices we make, do in fact, have more significance than we realize.\
+Sickness is necessary in order to know wellness. Knowing the\
+difference and understanding that we can create either, opens a whole\
+new realm of possibilities.\
+Let's suppose that we all agreed to help each other learn.\
+In order to\
+make the lessons effective, we had to forget we came here to learn.\
+Therefore we plead ignorance as to the "real" meaning to life.\
+THE W BOOK\
+62 THE W BOOK\
+\
+--- PAGE 74 ---\
+\
+9\
+Free Will and Evolution\
+Free Will and Evolution 9\
+You were drawn to this book for a reason.\
+Whatever the reason, you have gotten this far. For your evolution, I\
+hope you choose to finish it.\
+\'95 Are you truly interested in discovering who, what and why you\
+are?\
+Of what real value is there in understanding who you are?\
+Why are you here?\
+Why are things the way they are in your life?\
+Why do smart people do stupid things?\
+The great thing about asking any question is that the answers are\
+seldom complete; they usually lead to more questions.\
+Suppose we are here to evolve?\
+Suppose the Creator is evolving?\
+Suppose that, as part of Creator, we each are evolving as He/She is\
+evolving?\
+Would that help make more sense of the world as it is?\
+Could that help explain why things are the way they are?\
+Things are the way they are for a reason.\
+Is it so we can learn and grow?\
+Then what?\
+THE W BOOK\
+63\
+THE W BOOK\
+\
+--- PAGE 75 ---\
+\
+Free Will and Evolution.\
+9\
+We mentioned the significance of polarity, duality and paradox.\
+Understanding helps us define who we are and helps us make better\
+choices in our lives.\
+We suffer for a reason. What is this reason? To\
+learn that we are responsible for what we create.\
+We learn from our\
+experiences in order to create better experiences.\
+What kind of Creator\
+would allow such decadence, murder, mayhem, depravity, avarice,\
+chaos, and lovelessness in Creation?\
+One perhaps, Who is learning?\
+One perhaps, Who is experiencing (as we are) images of Him/Herself?\
+Suppose it is necessary to experience Lovelessness in order to learn\
+and better define Love?\
+Creator has given each of us Free Will.\
+Because Free Will is a gift, and consistent with Her intent, it is\
+therefore consistent with Divine Will.\
+Despite what it may look like,\
+Creator has given us another gift, Love. A gift yet to be realized.\
+A\
+Love that cannot be comprehended only because the lessons are\
+incomplete.\
+Sometimes, as we seek solutions to challenges, we have to approach\
+them from several directions.\
+In order to grasp the answers we truly\
+want, we have to really understand problems before attempting to\
+solve them.\
+We know what lovelessness and willessness is.\
+Sometimes we have to look at what we don't want to look at, in order\
+to understand better what we do want.\
+If you are here to learn, evolve and become more, then\
+where do you start?\
+Right where you are with yourself! What else do you have to work\
+with?\
+You have the Creator's gift of Love, which is you. This Gift is\
+like no other you have ever received.\
+What is required of you by\
+anyone offering you anything? Any offer, in order to be received,\
+must be accepted.\
+Otherwise the transaction has not been completed..\
+You must accept you, at some point in time.\
+You are not only made in the image of Creator, but you also possess\
+the power to reason, to want, to love, and to express.\
+\'95 What's suppose to happen next?\
+\'95 If you have not accepted these Gifts as part of you, Love, for\
+example, how can you give Love?\
+How can you give what you don't have?\
+How can you hold you dear and reject you at the same time?\
+How can you care about something you know nothing about?\
+How can you care for, misuse and abuse anything you have not\
+accepted?\
+THE W BOOK 64\
+THE W BOOK\
+\
+--- PAGE 76 ---\
+\
+Free Will and Evolution. 9\
+If you do not care about you, why would\
+you expect anyone else to care about you?\
+If you abuse you, then it is no surprise that others might think you like\
+it.\
+Why should you care about you? Why not? If you have been given\
+you by Creator, in Love, then to lovingly accept that Gift, might be a\
+place to start.\
+A place to start is to answer the question, "Who am I"?\
+You are a miracle of Creation. There are more reasons to explain why\
+the body should live forever, than to explain why it dies.\
+The body\
+regenerates itself and when free of abuse, functions beautifully.\
+The\
+body is complex and simple at the same time. The mind is connected\
+to the body. Both are energy.\
+They communicate with each other.\
+Perhaps the fact that they communicate intrigues us as much as how\
+they communicate, or is it more important to understand why they\
+communicate?\
+Are we too close to the trees to see the forest, to truly\
+understand the dynamics of this special communication?\
+Do you love you?\
+Why? Why not? If you do, how do you love you?\
+How do you\
+express your love for you, or lack of love for you?\
+What kind of\
+choices do you make that demonstrate that love? How is your\
+communication between mind and body?\
+Only you can choose to love you. Only you can know what you mean\
+by Love.\
+When you love you, have love for you, accept the Creator's\
+Gift of Love for you, only then can you give Love.\
+Only then can you\
+recognize and know another's Love.\
+THE W BOOK\
+65 THE W BOOK\
+\
+--- PAGE 77 ---\
+\
+10\
+Communication\
+Communication 10\
+We seldom succeed at "communicating"\
+To date, we as social animals have only made attempts at\
+communicating. We seldom succeed at "communicating".\
+The first communication we fail to make is with ourselves.\
+We tell\
+ourselves lies first, and expect everyone we meet to believe them.\
+We\
+awake in the morning, knowing full well we do not want to get up and\
+go to that job we don't like.\
+Yet each morning we do just that; put on a\
+false smile and go out to meet the world and do what we really do not\
+want to do!\
+"Body" is speaking loud and clear that it does not want to do "that"\
+and you force it to do "that" anyway.\
+No wonder Body rebels. You\
+go to a "job" you don't like, and pretend that you do, so you can get\
+paid on Friday.\
+After all, you have bills to pay.\
+How many of us are doing exactly what we want to do with our lives?\
+If we are not, why not? Probably over 70 percent of us are not doing\
+what we really want as a career.\
+We believe we can not make a living\
+at "it" doing what we really want to do.\
+Instead we pretend by\
+attempting to make what we really don't want to do work.\
+If you fail\
+to honestly communicate with you, how can you expect others to\
+communicate honestly with you? We lie.\
+Everyone lies. Lying has\
+become a way of life. We trick ourselves into believing the lies we tell\
+ourselves first, so that we can be more convincing to others.\
+Why do we do this? We really didn't know any better, - until now.\
+Now that you know better, you can choose to communicate better\
+with you.\
+When you lie to you, that makes it easier for you to allow\
+66\
+\
+--- PAGE 78 ---\
+\
+Communication 10\
+others to lie to you. Why do you lie to you? You don't want to hurt\
+anyone's feelings.\
+You don't want to disappoint anyone. You don't\
+want to be found out to be less than.\
+You don't want to be perceived\
+as having failed, and so you lie, knowing that sooner or later you are\
+going to get caught.\
+Then you make every encounter a guessing game\
+as to whether or not you are being told the truth by anyone.\
+Masks, a way of life\
+People mask themselves and present facades. As we move through\
+the day, the first lie we tell ourselves and others is when we are asked\
+"How are you?"\
+We automatically respond: "Fine," knowing we are\
+not, or suspect that the person asking doesn't really want to know.\
+Our masks and facades become a way of life. We have expectations of\
+ourselves and others that no one can live up to, usually.\
+We are\
+generally our own worst critics. We frequently take credit for\
+whatever it is, if done well, and absolutely deny it, if done not so well.\
+Disappointments hover over us most of our lives. As children we do\
+not want to disappoint our peers.\
+As adults we do not want to\
+disappoint our children, or spouses, or parents.\
+We ignore the\
+shortcomings of those we admire until it's just too obvious to ignore.\
+We often hide disappointments and shortcomings through drug\
+abuse. We must avoid conflict at all cost, unless, of course, we have\
+the upper hand or power position.\
+Otherwise we wait until things\
+change or sway into our position of power.\
+Or we just lie, first to\
+ourselves, then to others, that everything is just "fine".\
+When conflict means you have to back down, you plot and wait for the\
+opportunity to get even.\
+Heaven forbid we reveal our true feelings!\
+Instead, we let our Wills be crossed in order to avoid conflict with\
+parents, children, spouses, or bosses.\
+We compromise, acquiesce by consensus. Rationalization and\
+manipulation become the order of the day, peace at any cost, even if it\
+kills.\
+When we do any of these things, it is not real, and we do so with\
+resentment.\
+All because we begin to believe the lies we tell ourselves.\
+"Conflict" is a bad word. We have not learned to deal effectively with\
+conflict. Arguments often lead to violence.\
+Suppressed rage leads to\
+violence. Resentment leads to violence, you against you.\
+THE W BOOK 67 THE W BOOK\
+\
+--- PAGE 79 ---\
+\
+Communication 10\
+When you lie to you, you compromise yourself. When you allow\
+others to lie to you, you compromise yourself.\
+When you lie\
+knowingly, what are you attempting to do?\
+You are avoiding\
+confrontation over an issue that you will eventually face, so you're\
+only postponing the inevitable.\
+The issue is bound to go away if you\
+ignore it long enough or cover it with a lie, right?\
+Wrong!\
+Eventually, you must face you!\
+You will have to give up who you are pretending to be, in order to be\
+who you are.\
+You have to recognize your mask for what it is; an easy\
+way to avoid your acknowledgement of you.\
+You have to decide one\
+day to accept you for who and what you are, you must drop throw\
+away your mask and facades.\
+Are you afraid others will not like you?\
+If you are avoiding you, disliking you, not accepting who you are,\
+how can you expect others to accept or like you?\
+\'95 If you are avoiding trying to truly communicate with you, how can\
+you ever hope to communicate with another?\
+\'95 If you are continually lying to you, how can you expect\
+truthfulness from others?\
+Is it possible to communicate "truth" through a mask of lies?\
+What would happen if we all chose not to lie, ever? What if there was\
+a way to prevent lying?\
+Suppose we could just invite truth? You can.\
+When you choose to be honest with you, others will too.\
+In communicating with others we make "assumptions" and\
+"presumptions", regardless of the topic.\
+What is the difference\
+between "assumptions" and "presumptions"? An assumption is\
+drawing a conclusion without facts;\
+a presumption is drawing a\
+conclusion despite the facts.\
+We usually assume that a person is as good as their word, hence we\
+have expectations when transacting with them.\
+When our\
+expectations or assumptions turn out to be false, we then have\
+conflict. At this point, communications break down.\
+Depending on\
+who we are communicating, we win, lose, or draw;\
+it's a matter of\
+who is in the power position. It is about power!\
+When you do not exercise your power, or give it away, someone else\
+uses it, usually against you.\
+Your Will gets crossed. No one takes\
+anything from you. When you do not choose, others choose for you.\
+Intimidation works only when you feel powerless.\
+THE W BOOK\
+68\
+THE W BOOK\
+\
+--- PAGE 80 ---\
+\
+Communication 10\
+Will and Power are one..\
+Powerlessness or will-lessness comes from you not accepting you. If\
+you feel that you are inferior, regardless of the reason, so will others.\
+You must exercise your will without crossing another's, and not allow\
+others to cross your Will.\
+Dialogue, rhetoric, and deception passes as communication among\
+individuals, hence nations.\
+True communication begins with individuals. How do we\
+communicate effectively? Be honest with you. Be genuine with you.\
+Be authentic with you.\
+Be as clear as you can with you on any issue, in\
+any situation, regardless of circumstances.\
+This becomes easier as you\
+realize that you created it.\
+What you think and feel around issues helps you make balanced\
+choices for your highest good.\
+We use words to communicate. Since words can leave a lot to be\
+desired, understanding is challenged.\
+If the object of communication\
+is to be understood and we don't understand ourselves, then why are\
+we surprised that we don't understand one another?\
+Pause a moment and recall a conversation you've had recently, with\
+someone with whom you truly wanted to make a point.\
+Were you\
+effective? If not, why? Did communication take place? Why? Why\
+not? When did the communication break down?\
+Will you try again?\
+THE W BOOK 69\
+THE W BOOK\
+\
+--- PAGE 81 ---\
+\
+11\
+Your Obligation to...\
+Your Obligation to 11\
+To whom do you owe the most for the quality of your life?\
+All living things are energy. All things are in motion. Atoms are in\
+constant motion.\
+Energy can be seen more readily around living\
+things. This energy is in layers of differentiated frequencies, (which\
+are visible to us through our sense of clairvoyance).\
+This energy is\
+called the Aura. Science confirms the existence of this energy field\
+through Kirlian photography.\
+Things in nature apparently follow certain laws. Not all phenomena is\
+easily explained, for some things seem to defy explanation.\
+Thus,\
+natural order sometimes look more like chaos and disorder.\
+We have\
+looked at reasons it appears this way, also how we individually\
+contribute to the "chaos".\
+We have discussed balance in reference to imbalance, how we may\
+rethink who we are, and how to live in balance.\
+Now I ask, why\
+would you want to be more balanced? Why should you care?\
+For\
+several very important reasons, as follows.\
+To whom do you owe the most in regards to the quality of your life?\
+Knowing how reality is created, who is most responsible for the life\
+you lead?\
+You owe it to yourself to be clear as to whom you owe the\
+most.\
+It helps to ask yourself, "Who can do the most about any situation,\
+ultimately?" The answer is you!\
+Therefore to whom do you have the\
+greatest obligation? Again, you! And why would you be obligated to\
+you?\
+For one reason, Love. A very special love. The love you have\
+for you.\
+Who but you is going to care the most about you?\
+THE W BOOK 70 THE W BOOK\
+\
+--- PAGE 82 ---\
+\
+Your Obligation to 11\
+You've accepted you, and to this degree, you are obligated to choose\
+for your highest and best good.\
+Your daily choices are important!\
+For your choices, cumulatively determine your reality. The reality you\
+create can be quite sobering. Recreate your reality.\
+You must take\
+responsibility for your choices. The love and integrity you have for\
+you, means you must make each choice count!\
+You are able to love\
+you with honesty and genuineness, if you choose. You take\
+responsibility for your choices.\
+Your obligation is to you first! Hold\
+yourself accountable to you.\
+You owe that to you, because you love\
+and care about you.\
+If you attempted to live this way, what would your reality look like?\
+Our world would be more loving.\
+As more of us understand that\
+when we love ourselves, we can offer love to others.\
+For we are\
+choosing from a loving space.\
+We know what the world is like now.\
+How much have you contributed to its condition?\
+Will you continue, or do something different?\
+How much does your contribution matter to the world?\
+How much does it matter to you?\
+What will you do next?\
+It's all a matter of CHOICE.\
+And no matter what you CHOOSE,\
+you get to CHOOSE again\
+and again and again!\
+THE W BOOK 71 THE W BOOK\
+\
+--- PAGE 83 ---\
+\
+The Rules for Being Human 12\
+12\
+The Rules for Being Human\
+Owner's Manual for Your Life\
+When you were born, you didn't come with an owner's manual.\
+These guidelines make life work better.\
+1. You will receive a body.\
+You may like it or hate it, but it's the only thing\
+you are sure to keep for the rest of this life.\
+2. You will learn lessons.\
+You are enrolled in a full-time informal school\
+called "Life On Planet Earth".\
+Every person or\
+incident is the Universal Teacher.\
+3. There are no mistakes, only lessons.\
+Growth is a process of experimentation.\
+"Failures" are as much a part of the\
+process as "successes".\
+4. A lesson is repeated until learned.\
+It is presented to you in various forms until you\
+learn\
+then you can go on to the next lesson.\
+5. If you don't learn easy lessons, they get harder.\
+External problems are a precise reflection of\
+your internal state.\
+When you learn inner\
+obstructions, your outside world changes.\
+Pain is how the universe gets your attention.\
+THE W BOOK\
+72\
+THE W BOOK\
+\
+--- PAGE 84 ---\
+\
+6. You will know you've learned a lesson\
+when your actions change.\
+Wisdom is practice.\
+A little of something is\
+better than a lot of nothing.\
+7. "There" is no better than "here."\
+When your "there" becomes a "here" you will\
+simply obtain another "there" that again looks\
+better than "here."\
+8. Others are only a mirror of you.\
+You cannot love or hate something about\
+another unless it reflects something you love\
+or hate about yourself.\
+9. Your life is up to you.\
+Life provides the canvas; you do the painting.\
+Take charge of your life-or someone else will.\
+10. You always get what you want.\
+The Rules for Being Human 12\
+Your subconscious rightfully determines what energies,\
+experiences and people you attract - therefore, the only\
+foolproof way to know what you want, is to see what you\
+have.\
+There are no victims, only students.\
+11. There is no right or wrong, but there are consequences.\
+Moralizing doesn't help.\
+Judgments only hold\
+the patterns in place. Just do your best.\
+12. Your answers lie inside you.\
+Children need guidance from others; as we mature;\
+we trust our hearts, where the Laws of Spirit are written.\
+You know more than you have heard read or been told.\
+All you need to do is to look, listen and trust.\
+13. You will forget all this...\
+14. You can remember any time you wish...\
+An Article Taken from the\
+Los Angeles Resources Newspaper, March 1994\
+THE W BOOK\
+73 THE W BOOK\
+\
+--- PAGE 85 ---\
+\
+13\
+Body Speaks with Spirit, Heart, & Will 13\
+Body Speaks\
+with Spirit, Heart, I Will\
+Introduction: A Dialogue Between the Four Aspect\
+&A\
+We have learned that there are Four Aspects of God. They are: Spirit,\
+Heart, Will, and Body.\
+To understand God, we need to understand\
+that Spirit is electric energy, masculine in nature, and is represented\
+by the 7th, 6th and 5th Chakras.\
+Will is magnetic energy, feminine in\
+nature. It is emotional energy and feels everything that confronts it.\
+It\
+is represented by the 3rd, 2nd and 1st Chakras.\
+Spirit and Will are\
+polarized hence, the problem is the separation of Spirit and Will.\
+They\
+must come together in Heart to accomplish Balance.\
+Since we are all a part of God and Goddess, we too have Four Aspects:\
+Spirit, Heart, Will and Body.\
+This second part of the book presents a dialogue between the Four\
+Aspects. Let's listen in on the dialogue.\
+The figures are vaguely\
+defined; they seem to have form but no shape.\
+They appear to be\
+humanoid but not quite. They each are distinct in color.\
+As we seem to be invited into their mist, we can hear what appears to\
+be a conversation, though there is no sound;\
+no one seems to be\
+talking...\
+THE W BOOK 74\
+THE W BOOK"""\
+\
+with open('The_Double_You_Book.txt', 'w', encoding='utf-8') as f:\
+    f.write(content)}

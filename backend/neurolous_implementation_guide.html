@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neurolous | Implementation Dashboard</title>
+    
+    <link rel="icon" type="image/png" href="/static/icon.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8FAFC; /* Slate 50 */
+            color: #1e293b;
+        }
+
+        .neurolous-gradient {
+            background: linear-gradient(135deg, #06b6d4 0%, #4f46e5 100%);
+        }
+        
+        .text-gradient {
+            background: linear-gradient(135deg, #06b6d4 0%, #4f46e5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+            height: 300px;
+        }
+
+        .code-scroll::-webkit-scrollbar { width: 8px; height: 8px; }
+        .code-scroll::-webkit-scrollbar-track { background: #1e293b; }
+        .code-scroll::-webkit-scrollbar-thumb { background: #475569; border-radius: 4px; }
+
+        .tab-btn.active {
+            border-bottom: 2px solid #4f46e5;
+            color: #4f46e5;
+            font-weight: 700;
+        }
+        
+        .animate-fade-in {
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                
+                <div class="flex items-center gap-3">
+                    <img src="/static/icon.png" alt="N" class="w-8 h-8 rounded-lg object-cover" onerror="this.style.display='none'; document.getElementById('backup-logo').classList.remove('hidden')">
+                    <div id="backup-logo" class="w-8 h-8 rounded-lg neurolous-gradient flex items-center justify-center text-white font-bold hidden">N</div>
+                    
+                    <span class="text-xl font-bold tracking-tight">Neurolous<span class="text-slate-400 font-normal">Dashboard</span></span>
+                </div>
+
+                <nav class="hidden md:flex space-x-6 items-center">
+                    <a href="/" class="text-gray-500 hover:text-indigo-600 px-1 py-2 text-sm font-medium transition-colors">Home</a>
+                    
+                    <button onclick="switchTab('dashboard')" id="nav-dashboard" class="tab-btn active text-gray-500 hover:text-gray-900 px-1 py-2 text-sm font-medium transition-colors">Overview</button>
+                    <button onclick="switchTab('knowledge')" id="nav-knowledge" class="tab-btn text-gray-500 hover:text-gray-900 px-1 py-2 text-sm font-medium transition-colors">Knowledge Base</button>
+                    <button onclick="switchTab('architecture')" id="nav-architecture" class="tab-btn text-gray-500 hover:text-gray-900 px-1 py-2 text-sm font-medium transition-colors">Architecture</button>
+                    <button onclick="switchTab('client')" id="nav-client" class="tab-btn text-gray-500 hover:text-gray-900 px-1 py-2 text-sm font-medium transition-colors">Client App</button>
+                    <button onclick="switchTab('implementation')" id="nav-implementation" class="tab-btn text-gray-500 hover:text-gray-900 px-1 py-2 text-sm font-medium transition-colors">Code</button>
+                    
+                    <a href="/admin" class="text-gray-500 hover:text-indigo-600 px-1 py-2 text-sm font-medium transition-colors">Admin</a>
+                    <a href="/chat" class="text-gray-500 hover:text-indigo-600 px-1 py-2 text-sm font-medium transition-colors">Chat</a>
+                </nav>
+
+                <div class="md:hidden flex space-x-4">
+                    <a href="/" class="text-xs font-bold text-gray-500 uppercase">Home</a>
+                    <a href="/admin" class="text-xs font-bold text-gray-500 uppercase">Admin</a>
+                    <a href="/chat" class="text-xs font-bold text-gray-500 uppercase">Chat</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
+
+        <section id="view-dashboard" class="space-y-8 animate-fade-in">
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
+                <div class="p-10 md:flex items-center justify-between neurolous-gradient text-white">
+                    <div class="md:w-2/3">
+                        <h1 class="text-3xl font-bold mb-2">Anthropologic Agent Framework</h1>
+                        <p class="text-blue-50 text-lg mb-6 max-w-2xl">
+                            A local-first, privacy-focused platform for creating "Digital Souls." 
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-4">
+                            <a href="/history/export/evals" class="px-4 py-2 rounded-lg bg-white/20 backdrop-blur-md text-sm font-bold border border-white/30 hover:bg-white/30 transition flex items-center gap-2">
+                                <i class="fas fa-flask"></i> Download Research Data (JSON)
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mt-6 md:mt-0 md:w-1/3 flex justify-center gap-4">
+                        <div class="text-center bg-white/10 p-5 rounded-2xl backdrop-blur-md border border-white/20">
+                            <div class="text-4xl font-bold" id="fact-count">0</div>
+                            <div class="text-xs text-blue-100 uppercase tracking-wide mt-1">RAG Chunks</div>
+                        </div>
+                        <div class="text-center bg-white/10 p-5 rounded-2xl backdrop-blur-md border border-white/20">
+                            <div class="text-4xl font-bold" id="conversation-count">0</div>
+                            <div class="text-xs text-blue-100 uppercase tracking-wide mt-1">Conversations</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100 flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-cyan-100 flex items-center justify-center">
+                        <i class="fas fa-brain text-cyan-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-bold text-gray-900" id="facts-stat">0</div>
+                        <div class="text-xs text-gray-500 uppercase">Facts Ingested</div>
+                    </div>
+                </div>
+                <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100 flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center">
+                        <i class="fas fa-book text-indigo-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-bold text-gray-900" id="philosophy-stat">0</div>
+                        <div class="text-xs text-gray-500 uppercase">Philosophy Chunks</div>
+                    </div>
+                </div>
+                <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100 flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-pink-100 flex items-center justify-center">
+                        <i class="fas fa-microphone text-pink-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-bold text-gray-900" id="voice-stat">0</div>
+                        <div class="text-xs text-gray-500 uppercase">Voice Samples</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <h3 class="text-lg font-bold mb-4 border-b pb-2 text-gray-700">Memory Distribution</h3>
+                    <div class="chart-container">
+                        <canvas id="sourceDistChart"></canvas>
+                    </div>
+                    <p class="mt-4 text-xs text-gray-400 text-center">Real-time data from /stats</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <h3 class="text-lg font-bold mb-4 border-b pb-2 text-gray-700">System Balance</h3>
+                    <div class="flex items-center justify-center h-full pb-8">
+                        <div class="chart-container">
+                            <canvas id="aspectsChart"></canvas>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-xs text-gray-400 text-center">Spirit (Intellect) vs Will (Emotion)</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="view-knowledge" class="hidden space-y-8 animate-fade-in">
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-2xl font-bold text-gray-900">Reference Persona Data</h2>
+                    <div class="flex gap-2">
+                         <a href="/knowledge/export/csv" class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-lg text-sm font-bold shadow-sm transition flex items-center gap-2">
+                            <i class="fas fa-file-csv"></i> Export CSV
+                        </a>
+                        <a href="/admin" target="_blank" class="text-indigo-600 text-sm font-semibold hover:underline px-3 py-2">Edit in Admin &rarr;</a>
+                    </div>
+                </div>
+                <p class="text-gray-500 mb-8">This timeline represents the data currently ingested into ChromaDB. The agent uses this as "Ground Truth."</p>
+
+                <div class="mb-10">
+                    <h3 class="text-lg font-bold mb-4 text-gradient">Life Timeline</h3>
+                    <div class="relative border-l-2 border-indigo-100 ml-4 space-y-6" id="timeline-container">
+                        <p class="text-gray-400 italic pl-4">Loading data from vector database...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="view-architecture" class="hidden space-y-8 animate-fade-in">
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
+                <h2 class="text-2xl font-bold mb-6">System Architecture</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-10">
+                    <div class="bg-slate-50 border border-slate-200 p-6 rounded-xl flex flex-col items-center text-center">
+                        <div class="w-16 h-16 bg-cyan-100 text-cyan-600 rounded-full flex items-center justify-center mb-4 text-2xl"><i class="fas fa-mobile-alt"></i></div>
+                        <h3 class="font-bold text-lg">Flutter Client</h3>
+                        <p class="text-sm text-gray-500 mb-4">Mobile Interface</p>
+                        <ul class="text-xs text-left space-y-2 text-gray-600 bg-white p-4 rounded w-full">
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Speech-to-Text</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Audio Playback</li>
+                        </ul>
+                    </div>
+                    <div class="bg-slate-900 text-white p-6 rounded-xl flex flex-col items-center text-center relative overflow-hidden lg:col-span-2">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-500 to-indigo-600"></div>
+                        <div class="flex w-full justify-around items-center h-full">
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-slate-800 rounded-full flex items-center justify-center mb-4 text-2xl mx-auto">⚡</div>
+                                <h3 class="font-bold text-lg">Mac Mini Host</h3>
+                                <p class="text-sm text-gray-400">FastAPI Orchestrator</p>
+                            </div>
+                            <div class="space-y-2 text-left">
+                                <div class="bg-slate-800 p-2 rounded text-xs w-56 flex justify-between"><span>ChromaDB</span> <span class="text-cyan-400">RAG Memory</span></div>
+                                <div class="bg-slate-800 p-2 rounded text-xs w-56 flex justify-between"><span>Ollama</span> <span class="text-indigo-400">Gemma 3:4B</span></div>
+                                <div class="bg-slate-800 p-2 rounded text-xs w-56 flex justify-between"><span>Chatterbox</span> <span class="text-pink-400">Voice Clone</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="view-client" class="hidden space-y-8 animate-fade-in">
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
+                <h2 class="text-2xl font-bold mb-2">Mobile Client Installation</h2>
+                <p class="text-gray-500 mb-6">The Flutter mobile app connects to this backend server for chat and voice interaction.</p>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-cyan-50 border border-cyan-200 p-5 rounded-xl">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-10 h-10 bg-cyan-600 text-white rounded-full flex items-center justify-center font-bold">1</div>
+                            <h3 class="font-bold text-cyan-800">Prerequisites</h3>
+                        </div>
+                        <ul class="text-sm text-cyan-700 space-y-2">
+                            <li><i class="fas fa-check mr-2"></i>Flutter SDK 3.0+</li>
+                            <li><i class="fas fa-check mr-2"></i>Xcode (iOS) or Android Studio</li>
+                            <li><i class="fas fa-check mr-2"></i>Physical device or simulator</li>
+                        </ul>
+                    </div>
+                    <div class="bg-indigo-50 border border-indigo-200 p-5 rounded-xl">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold">2</div>
+                            <h3 class="font-bold text-indigo-800">Source Location</h3>
+                        </div>
+                        <p class="text-sm text-indigo-700">
+                            The Flutter project is in the <code class="bg-indigo-100 px-2 py-1 rounded">/mobile</code> directory.
+                            <br><br>Files: <code>pubspec.yaml</code> and <code>lib/main.dart</code>
+                        </p>
+                    </div>
+                    <div class="bg-pink-50 border border-pink-200 p-5 rounded-xl">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-10 h-10 bg-pink-600 text-white rounded-full flex items-center justify-center font-bold">3</div>
+                            <h3 class="font-bold text-pink-800">Features</h3>
+                        </div>
+                        <ul class="text-sm text-pink-700 space-y-2">
+                            <li><i class="fas fa-microphone mr-2"></i>Voice Input (STT)</li>
+                            <li><i class="fas fa-volume-up mr-2"></i>Audio Playback (TTS)</li>
+                            <li><i class="fas fa-keyboard mr-2"></i>Text Chat Interface</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="font-bold text-gray-800 mb-4">Option A: Use Existing Project</h3>
+                        <div class="bg-slate-900 text-cyan-300 p-6 rounded-lg font-mono text-sm shadow-inner overflow-x-auto">
+                            <p class="text-gray-400 mb-2"># Navigate to mobile directory</p>
+                            <p class="mb-4">cd mobile</p>
+
+                            <p class="text-gray-400 mb-2"># Get dependencies</p>
+                            <p class="mb-4">flutter pub get</p>
+
+                            <p class="text-gray-400 mb-2"># Run on connected device</p>
+                            <p class="mb-4">flutter run</p>
+
+                            <p class="text-gray-400 mb-2"># Build for iOS</p>
+                            <p class="mb-4">flutter build ios --release</p>
+
+                            <p class="text-gray-400 mb-2"># Build for Android</p>
+                            <p>flutter build apk --release</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="font-bold text-gray-800 mb-4">Option B: Create New Project</h3>
+                        <div class="bg-slate-900 text-cyan-300 p-6 rounded-lg font-mono text-sm shadow-inner overflow-x-auto">
+                            <p class="text-gray-400 mb-2"># Create new Flutter project</p>
+                            <p class="mb-4">flutter create neurolous_client</p>
+                            <p class="mb-4">cd neurolous_client</p>
+
+                            <p class="text-gray-400 mb-2"># Add required packages</p>
+                            <p class="mb-4 text-wrap">flutter pub add http audioplayers speech_to_text permission_handler shared_preferences</p>
+
+                            <p class="text-gray-400 mb-2"># Copy code from "Code" tab</p>
+                            <p class="mb-4"># Replace lib/main.dart content</p>
+
+                            <p class="text-gray-400 mb-2"># Run</p>
+                            <p>flutter run</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 space-y-6">
+                    <div class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-lg">
+                        <h4 class="font-bold text-amber-700"><i class="fas fa-network-wired mr-2"></i>Network Configuration</h4>
+                        <p class="text-sm text-amber-700 mt-2">
+                            In the app settings, enter this server's IP address:
+                        </p>
+                        <div class="mt-3 bg-amber-100 p-3 rounded-lg">
+                            <code class="text-lg font-bold text-amber-900" id="server-ip-display">Loading...</code>
+                            <button onclick="copyServerIP()" class="ml-3 text-xs bg-amber-600 text-white px-2 py-1 rounded hover:bg-amber-700">Copy</button>
+                        </div>
+                        <p class="text-xs text-amber-600 mt-2"><b>Note:</b> Do NOT use <code>localhost</code> on physical devices.</p>
+                    </div>
+
+                    <h3 class="text-xl font-bold text-gray-800 pt-4 border-t">Platform Requirements</h3>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                        <div class="bg-blue-50 border border-blue-200 p-4 rounded-lg">
+                            <h4 class="font-bold text-blue-800 flex items-center gap-2"><i class="fab fa-apple"></i> iOS</h4>
+                            <p class="text-sm text-blue-700 mt-2"><b>Apple ID Required</b> - Free accounts allow 7-day installs (must reinstall weekly). Paid Developer Account ($99/yr) removes this limit and enables TestFlight distribution.</p>
+                        </div>
+                        <div class="bg-green-50 border border-green-200 p-4 rounded-lg">
+                            <h4 class="font-bold text-green-800 flex items-center gap-2"><i class="fab fa-android"></i> Android</h4>
+                            <p class="text-sm text-green-700 mt-2"><b>No Account Required</b> - APKs can be built and shared freely. Users just enable "Install from Unknown Sources" to install.</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold text-gray-800 pt-4 border-t">Device Setup Steps</h3>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-slate-50 border border-slate-200 p-5 rounded-xl">
+                            <h4 class="font-bold text-slate-800 flex items-center gap-2 mb-4">
+                                <i class="fab fa-apple text-2xl"></i> iOS Setup
+                            </h4>
+                            <div class="space-y-3 text-sm">
+                                <div class="bg-white p-3 rounded border border-slate-200">
+                                    <p class="font-bold text-slate-700">1. Configure Code Signing (Xcode)</p>
+                                    <p class="text-slate-600 mt-1">Run <code class="bg-slate-100 px-1 rounded">flutter create .</code> then open <code class="bg-slate-100 px-1 rounded">ios/Runner.xcworkspace</code></p>
+                                    <p class="text-slate-600 mt-1">Select Runner > Signing & Capabilities > Set Team (Apple ID)</p>
+                                </div>
+                                <div class="bg-white p-3 rounded border border-slate-200">
+                                    <p class="font-bold text-slate-700">2. Enable Developer Mode (iOS 16+)</p>
+                                    <p class="text-slate-600 mt-1">Settings > Privacy & Security > Developer Mode > Enable</p>
+                                    <p class="text-xs text-slate-500 mt-1">(Requires device restart)</p>
+                                </div>
+                                <div class="bg-white p-3 rounded border border-slate-200">
+                                    <p class="font-bold text-slate-700">3. Trust Developer Certificate</p>
+                                    <p class="text-slate-600 mt-1">Settings > General > VPN & Device Management > Trust your Apple ID</p>
+                                </div>
+                                <div class="bg-white p-3 rounded border border-slate-200">
+                                    <p class="font-bold text-slate-700">4. Info.plist Permissions</p>
+                                    <p class="text-slate-600 mt-1">Add to <code class="bg-slate-100 px-1 rounded">ios/Runner/Info.plist</code>:</p>
+                                    <code class="text-xs block mt-2 bg-slate-100 p-2 rounded">NSMicrophoneUsageDescription</code>
+                                    <code class="text-xs block mt-1 bg-slate-100 p-2 rounded">NSSpeechRecognitionUsageDescription</code>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-50 border border-slate-200 p-5 rounded-xl">
+                            <h4 class="font-bold text-slate-800 flex items-center gap-2 mb-4">
+                                <i class="fab fa-android text-2xl text-green-600"></i> Android Setup
+                            </h4>
+                            <div class="space-y-3 text-sm">
+                                <div class="bg-white p-3 rounded border border-slate-200">
+                                    <p class="font-bold text-slate-700">1. Enable Developer Options</p>
+                                    <p class="text-slate-600 mt-1">Settings > About Phone > Tap "Build Number" 7 times</p>
+                                </div>
+                                <div class="bg-white p-3 rounded border border-slate-200">
+                                    <p class="font-bold text-slate-700">2. Enable USB Debugging</p>
+                                    <p class="text-slate-600 mt-1">Settings > Developer Options > USB Debugging > Enable</p>
+                                </div>
+                                <div class="bg-white p-3 rounded border border-slate-200">
+                                    <p class="font-bold text-slate-700">3. Install from Unknown Sources</p>
+                                    <p class="text-slate-600 mt-1">Settings > Security > Install Unknown Apps > Allow for your file manager</p>
+                                    <p class="text-xs text-slate-500 mt-1">(Only needed for APK install)</p>
+                                </div>
+                                <div class="bg-white p-3 rounded border border-slate-200">
+                                    <p class="font-bold text-slate-700">4. AndroidManifest Permissions</p>
+                                    <p class="text-slate-600 mt-1">Already included in Flutter packages</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="view-implementation" class="hidden space-y-6 animate-fade-in">
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-2xl font-bold">Implementation Code</h2>
+                </div>
+                
+                <div class="flex space-x-1 bg-gray-100 p-1 rounded-lg mb-4 w-fit">
+                    <button onclick="showCode('backend', this)" id="btn-backend" class="code-tab-btn px-4 py-2 text-sm font-medium rounded-md bg-white shadow-sm text-indigo-700 transition">Backend (main.py)</button>
+                    <button onclick="showCode('flutter', this)" id="btn-flutter" class="code-tab-btn px-4 py-2 text-sm font-medium rounded-md text-gray-500 hover:text-gray-900 transition">Flutter (main.dart)</button>
+                </div>
+
+                <div class="relative group">
+                    <button onclick="copyCode()" class="absolute top-4 right-4 bg-slate-700 hover:bg-slate-600 text-white px-3 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition">Copy</button>
+                    <pre class="bg-slate-900 rounded-lg p-6 overflow-x-auto h-[600px] code-scroll text-sm font-mono text-cyan-300 leading-relaxed" id="code-viewer"></pre>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // Store code strings for the viewer
+        const codeTemplates = {
+            backend: `# main.py - Neurolous Open Source Backend
+import os, json, sqlite3, ollama, torch, torchaudio
+from fastapi import FastAPI, UploadFile, File, Form, HTTPException
+from fastapi.responses import HTMLResponse, StreamingResponse
+from langchain_ollama import OllamaEmbeddings
+from langchain_chroma import Chroma
+from chatterbox import ChatterboxTTS
+
+# Note: This is a preview. The actual file running this dashboard is the full code.
+
+@app.get("/knowledge/export/csv")
+async def export_knowledge_csv():
+    # Exports ChromaDB data to CSV
+    collection = vector_db._collection
+    data = collection.get()
+    # ... CSV writing logic ...
+
+@app.get("/history/export/evals")
+async def export_research_json():
+    # Exports Chat History in Research/Eval format (JSON)
+    cursor.execute("SELECT * FROM turns ORDER BY timestamp ASC")
+    # ... JSON formatting ...
+`,
+            flutter: `import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+import 'package:audioplayers/audioplayers.dart';
+import 'package:speech_to_text/speech_to_text.dart' as stt;
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:permission_handler/permission_handler.dart';
+
+void main() {
+  runApp(const NeurolousApp());
+}
+
+class NeurolousApp extends StatelessWidget {
+  const NeurolousApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Neurolous Client',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        useMaterial3: true,
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.indigo),
+        scaffoldBackgroundColor: const Color(0xFFF8FAFC),
+      ),
+      home: const ChatScreen(),
+    );
+  }
+}
+
+class ChatScreen extends StatefulWidget {
+  const ChatScreen({super.key});
+
+  @override
+  State<ChatScreen> createState() => _ChatScreenState();
+}
+
+class _ChatScreenState extends State<ChatScreen> {
+  final TextEditingController _ipController = TextEditingController();
+  final List<Map<String, String>> _messages = [];
+  final AudioPlayer _audioPlayer = AudioPlayer();
+  late stt.SpeechToText _speech;
+  bool _isListening = false;
+  bool _isLoading = false;
+  String _backendUrl = "http://127.0.0.1:8000";
+
+  @override
+  void initState() {
+    super.initState();
+    _speech = stt.SpeechToText();
+    _loadSettings();
+    _requestPermissions();
+  }
+
+  Future<void> _loadSettings() async {
+    final prefs = await SharedPreferences.getInstance();
+    setState(() {
+      _backendUrl = prefs.getString('backend_ip') ?? "http://192.168.1.X:8000";
+      _ipController.text = _backendUrl;
+    });
+  }
+
+  Future<void> _saveSettings() async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString('backend_ip', _ipController.text);
+    setState(() {
+      _backendUrl = _ipController.text;
+    });
+    Navigator.pop(context);
+  }
+
+  Future<void> _requestPermissions() async {
+    await [Permission.microphone, Permission.speech].request();
+  }
+
+  Future<void> _sendMessage(String text) async {
+    if (text.isEmpty) return;
+    setState(() {
+      _messages.add({"role": "user", "text": text});
+      _isLoading = true;
+    });
+
+    try {
+      final response = await http.post(
+        Uri.parse('$_backendUrl/chat/text'),
+        body: {'message': text},
+      );
+
+      if (response.statusCode == 200) {
+        String botResponse = response.body;
+        setState(() => _messages.add({"role": "bot", "text": botResponse}));
+        _playVoice(botResponse);
+      }
+    } catch (e) {
+      setState(() => _messages.add({"role": "system", "text": "Connection Error: $e"}));
+    } finally {
+      setState(() => _isLoading = false);
+    }
+  }
+
+  Future<void> _playVoice(String text) async {
+    try {
+      await _audioPlayer.stop();
+      // NOTE: In source code, backslash before $ is required for JS to treat it as string literal
+      String audioUrl = '$_backendUrl/voice/generate?text=\${Uri.encodeComponent(text)}';
+      await _audioPlayer.play(UrlSource(audioUrl));
+    } catch (e) {
+      print("Audio Error: $e");
+    }
+  }
+
+  void _listen() async {
+    if (!_isListening) {
+      bool available = await _speech.initialize();
+      if (available) {
+        setState(() => _isListening = true);
+        _speech.listen(onResult: (val) {
+          if (val.finalResult) {
+             setState(() => _isListening = false);
+             _sendMessage(val.recognizedWords);
+          }
+        });
+      }
+    } else {
+      setState(() => _isListening = false);
+      _speech.stop();
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Neurolous Interface", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+        centerTitle: true,
+        flexibleSpace: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(colors: [Color(0xFF06B6D4), Color(0xFF4F46E5)]),
+          ),
+        ),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.settings, color: Colors.white),
+            onPressed: () {
+              showDialog(context: context, builder: (ctx) => AlertDialog(
+                title: const Text("Backend Config"),
+                content: TextField(
+                  controller: _ipController,
+                  decoration: const InputDecoration(labelText: "Backend URL (http://ip:8000)"),
+                ),
+                actions: [TextButton(onPressed: _saveSettings, child: const Text("Save"))],
+              ));
+            },
+          )
+        ],
+      ),
+      body: Column(
+        children: [
+          Expanded(
+            child: ListView.builder(
+              padding: const EdgeInsets.all(16),
+              itemCount: _messages.length,
+              itemBuilder: (context, index) {
+                final msg = _messages[index];
+                bool isUser = msg['role'] == 'user';
+                return Align(
+                  alignment: isUser ? Alignment.centerRight : Alignment.centerLeft,
+                  child: Container(
+                    margin: const EdgeInsets.symmetric(vertical: 4),
+                    padding: const EdgeInsets.all(12),
+                    decoration: BoxDecoration(
+                      color: isUser ? Colors.indigo.shade50 : Colors.white,
+                      borderRadius: BorderRadius.circular(12),
+                      border: Border.all(color: isUser ? Colors.indigo.shade100 : Colors.grey.shade200),
+                    ),
+                    child: Text(msg['text']!, style: const TextStyle(fontSize: 16)),
+                  ),
+                );
+              },
+            ),
+          ),
+          if (_isLoading) const LinearProgressIndicator(minHeight: 2),
+          Container(
+            padding: const EdgeInsets.all(24),
+            decoration: BoxDecoration(color: Colors.white),
+            child: GestureDetector(
+              onLongPress: _listen,
+              onLongPressUp: () { _speech.stop(); setState(() => _isListening = false); },
+              child: Container(
+                height: 64,
+                decoration: BoxDecoration(
+                  gradient: const LinearGradient(colors: [Color(0xFF06B6D4), Color(0xFF4F46E5)]),
+                  borderRadius: BorderRadius.circular(32),
+                  boxShadow: [BoxShadow(color: Colors.indigo.withOpacity(0.4), blurRadius: 8, offset: const Offset(0, 4))],
+                ),
+                child: Center(
+                  child: Text(
+                    _isListening ? "Listening..." : "Hold to Speak",
+                    style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 18),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+`
+        };
+
+        // --- FETCH LOGIC ---
+
+        let serverUrl = '';
+
+        async function fetchServerIP() {
+            try {
+                const response = await fetch('/server/ip');
+                const data = await response.json();
+                serverUrl = data.url;
+                const display = document.getElementById('server-ip-display');
+                if (display) {
+                    display.innerText = data.url;
+                }
+            } catch (e) {
+                const display = document.getElementById('server-ip-display');
+                if (display) {
+                    display.innerText = 'http://' + window.location.hostname + ':8000';
+                }
+            }
+        }
+
+        function copyServerIP() {
+            const url = serverUrl || ('http://' + window.location.hostname + ':8000');
+            navigator.clipboard.writeText(url);
+            alert('Copied: ' + url);
+        }
+
+        async function populateTimeline() {
+            const container = document.getElementById('timeline-container');
+            try {
+                const response = await fetch('/knowledge/facts');
+                if (!response.ok) throw new Error("API Error");
+                const facts = await response.json();
+                
+                container.innerHTML = '';
+                if(facts.length === 0) {
+                    container.innerHTML = '<p class="text-gray-400 pl-4">No facts ingested yet. Upload a CSV in Admin.</p>';
+                    return;
+                }
+
+                facts.forEach(fact => {
+                    const div = document.createElement('div');
+                    div.className = "mb-8 ml-4 relative";
+                    div.innerHTML = `
+                        <div class="absolute w-3 h-3 bg-cyan-500 rounded-full -left-[23px] border border-white ring-4 ring-white"></div>
+                        <time class="mb-1 text-xs font-bold uppercase tracking-wide text-gray-400">${fact.year}</time>
+                        <p class="text-gray-800 bg-white p-3 rounded-lg shadow-sm border border-gray-100 mt-1">${fact.text}</p>
+                    `;
+                    container.appendChild(div);
+                });
+            } catch (e) {
+                container.innerHTML = '<p class="text-red-400 pl-4">Failed to load facts.</p>';
+            }
+        }
+
+        async function initCharts() {
+            try {
+                const response = await fetch('/stats');
+                const stats = await response.json();
+
+                // Update header stats
+                document.getElementById('fact-count').innerText = (stats.facts + stats.philosophy);
+                document.getElementById('conversation-count').innerText = stats.conversations || 0;
+
+                // Update stat cards
+                document.getElementById('facts-stat').innerText = stats.facts;
+                document.getElementById('philosophy-stat').innerText = stats.philosophy;
+                document.getElementById('voice-stat').innerText = stats.voice;
+
+                const ctx1 = document.getElementById('sourceDistChart').getContext('2d');
+                new Chart(ctx1, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Facts', 'Philosophy', 'Voice', 'Conversations'],
+                        datasets: [{
+                            label: 'Count',
+                            data: [stats.facts, stats.philosophy, stats.voice, stats.conversations || 0],
+                            backgroundColor: ['#06b6d4', '#4f46e5', '#ec4899', '#10b981']
+                        }]
+                    },
+                    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } }
+                });
+
+                const ctx2 = document.getElementById('aspectsChart').getContext('2d');
+                new Chart(ctx2, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Facts (Spirit)', 'Philosophy (Will)'],
+                        datasets: [{
+                            data: [stats.facts, stats.philosophy],
+                            backgroundColor: ['#06b6d4', '#4f46e5'],
+                            borderWidth: 0
+                        }]
+                    },
+                    options: { responsive: true, maintainAspectRatio: false, cutout: '75%' }
+                });
+
+            } catch (error) {
+                console.warn("Backend error", error);
+            }
+        }
+
+        function switchTab(tabName) {
+            ['dashboard', 'knowledge', 'architecture', 'implementation', 'client'].forEach(t => {
+                const view = document.getElementById(`view-${t}`);
+                const nav = document.getElementById(`nav-${t}`);
+                if (view) view.classList.add('hidden');
+                if (nav) {
+                    nav.classList.remove('active', 'text-indigo-600', 'border-indigo-600');
+                    nav.classList.add('text-gray-500');
+                }
+            });
+            const selected = document.getElementById(`view-${tabName}`);
+            if (selected) {
+                selected.classList.remove('hidden');
+                selected.classList.remove('animate-fade-in');
+                void selected.offsetWidth; 
+                selected.classList.add('animate-fade-in');
+            }
+            const btn = document.getElementById(`nav-${tabName}`);
+            if (btn) {
+                btn.classList.add('active', 'text-indigo-600');
+                btn.classList.remove('text-gray-500');
+            }
+        }
+
+        function showCode(type, btnElement) {
+            document.getElementById('code-viewer').textContent = codeTemplates[type];
+            document.querySelectorAll('.code-tab-btn').forEach(b => {
+                b.classList.remove('bg-white', 'shadow-sm', 'text-indigo-700');
+                b.classList.add('text-gray-500');
+            });
+            if(btnElement) {
+                btnElement.classList.add('bg-white', 'shadow-sm', 'text-indigo-700');
+                btnElement.classList.remove('text-gray-500');
+            }
+        }
+
+        function copyCode() {
+            navigator.clipboard.writeText(document.getElementById('code-viewer').textContent);
+            alert("Copied!");
+        }
+
+        window.addEventListener('load', () => {
+            populateTimeline();
+            initCharts();
+            fetchServerIP();
+            showCode('backend');
+        });
+    </script>
+</body>
+</html>

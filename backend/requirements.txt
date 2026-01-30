@@ -1,0 +1,25 @@
+# Neurolous Open Source Agent - Python Dependencies
+
+# Web Framework
+fastapi>=0.109.0
+uvicorn>=0.27.0
+
+# AI & LLM
+ollama>=0.1.0
+langchain-ollama>=0.1.0
+langchain-chroma>=0.1.0
+langchain-text-splitters>=0.0.1
+
+# Vector Database
+chromadb>=0.4.0
+
+# Voice Synthesis
+chatterbox-tts>=0.1.0
+torch>=2.0.0
+torchaudio>=2.0.0
+
+# PDF Processing
+PyMuPDF>=1.23.0
+
+# Utilities
+python-multipart>=0.0.6

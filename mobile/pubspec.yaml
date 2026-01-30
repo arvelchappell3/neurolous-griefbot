@@ -1,0 +1,37 @@
+name: neurolous_client
+description: A Flutter mobile client for the Neurolous Open Source Agent framework.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Networking
+  http: ^1.2.0
+
+  # Audio playback for TTS responses
+  audioplayers: ^6.0.0
+
+  # Speech-to-text for voice input
+  speech_to_text: ^6.6.0
+
+  # Permissions handling
+  permission_handler: ^11.3.0
+
+  # Persistent storage for settings
+  shared_preferences: ^2.2.2
+
+  # Material icons
+  cupertino_icons: ^1.0.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true

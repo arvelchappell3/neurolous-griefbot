@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neurolous | Chat</title>
+    <link rel="icon" type="image/png" href="/static/icon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+
+        .neurolous-gradient {
+            background: linear-gradient(135deg, #06b6d4 0%, #4f46e5 100%);
+        }
+
+        .chat-container {
+            height: calc(100vh - 180px);
+            overflow-y: auto;
+        }
+
+        .message-bubble {
+            max-width: 80%;
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .typing-indicator {
+            display: inline-flex;
+            gap: 4px;
+        }
+
+        .typing-indicator span {
+            width: 8px;
+            height: 8px;
+            background: #94a3b8;
+            border-radius: 50%;
+            animation: bounce 1.4s infinite;
+        }
+
+        .typing-indicator span:nth-child(2) { animation-delay: 0.2s; }
+        .typing-indicator span:nth-child(3) { animation-delay: 0.4s; }
+
+        @keyframes bounce {
+            0%, 60%, 100% { transform: translateY(0); }
+            30% { transform: translateY(-8px); }
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        #chat-input:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3);
+        }
+
+        .voice-btn.playing {
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.4); }
+            50% { box-shadow: 0 0 0 12px rgba(99, 102, 241, 0); }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-3">
+                    <img src="/static/icon.png" alt="N" class="w-8 h-8 rounded-lg object-cover" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden')">
+                    <div class="w-8 h-8 rounded-lg neurolous-gradient flex items-center justify-center text-white font-bold hidden">N</div>
+                    <span class="text-xl font-bold tracking-tight">Neurolous<span class="text-slate-400 font-normal">Chat</span></span>
+                </div>
+                <nav class="flex space-x-4 items-center">
+                    <a href="/" class="text-gray-500 hover:text-indigo-600 px-1 py-2 text-sm font-medium transition-colors">Home</a>
+                    <a href="/dashboard" class="text-gray-500 hover:text-indigo-600 px-1 py-2 text-sm font-medium transition-colors">Dashboard</a>
+                    <a href="/admin" class="text-gray-500 hover:text-indigo-600 px-1 py-2 text-sm font-medium transition-colors">Admin</a>
+                    <a href="/chat" class="text-indigo-600 font-bold px-1 py-2 text-sm border-b-2 border-indigo-600">Chat</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Chat Area -->
+    <main class="flex-1 max-w-4xl w-full mx-auto px-4 py-6">
+
+        <!-- Persona Info Banner -->
+        <div class="glass-panel rounded-xl p-4 mb-4 flex items-center gap-4 border border-slate-200">
+            <div class="w-12 h-12 rounded-full neurolous-gradient flex items-center justify-center text-white text-xl font-bold" id="persona-avatar">?</div>
+            <div>
+                <h2 class="font-bold text-slate-800" id="persona-name">Loading...</h2>
+                <p class="text-sm text-slate-500" id="persona-subtitle">Connecting to your loved one</p>
+            </div>
+            <div class="ml-auto flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                <span class="text-xs text-slate-500">Online</span>
+            </div>
+        </div>
+
+        <!-- Messages Container -->
+        <div id="chat-messages" class="chat-container bg-white rounded-xl shadow-sm border border-slate-200 p-4 space-y-4 mb-4">
+
+            <!-- Welcome Message -->
+            <div class="text-center py-8 text-slate-400">
+                <i class="fas fa-comments text-4xl mb-3 text-indigo-200"></i>
+                <p class="text-sm">Start a conversation with your loved one.</p>
+                <p class="text-xs mt-1">Messages are private and stored locally.</p>
+            </div>
+
+        </div>
+
+        <!-- Input Area -->
+        <div class="glass-panel rounded-xl p-4 border border-slate-200 shadow-sm">
+            <form id="chat-form" class="flex gap-3">
+                <input
+                    type="text"
+                    id="chat-input"
+                    placeholder="Type your message..."
+                    class="flex-1 px-4 py-3 rounded-xl border border-slate-300 bg-white text-slate-800 placeholder-slate-400"
+                    autocomplete="off"
+                >
+                <button
+                    type="submit"
+                    id="send-btn"
+                    class="px-6 py-3 rounded-xl neurolous-gradient text-white font-bold hover:opacity-90 transition flex items-center gap-2 disabled:opacity-50"
+                >
+                    <i class="fas fa-paper-plane"></i>
+                    <span class="hidden sm:inline">Send</span>
+                </button>
+            </form>
+            <div class="flex justify-between items-center mt-3 text-xs text-slate-400">
+                <div class="flex items-center gap-4">
+                    <label class="flex items-center gap-2 cursor-pointer hover:text-indigo-600 transition">
+                        <input type="checkbox" id="auto-voice" class="rounded border-slate-300 text-indigo-600 focus:ring-indigo-500">
+                        <i class="fas fa-volume-up"></i>
+                        <span>Auto-play voice</span>
+                    </label>
+                </div>
+                <span id="status-text">Ready</span>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Audio Player (hidden) -->
+    <audio id="audio-player" style="display: none;"></audio>
+
+    <script>
+        // --- STATE ---
+        let isGenerating = false;
+        let currentAudio = null;
+        let personaConfig = null;
+
+        // --- DOM ELEMENTS ---
+        const chatMessages = document.getElementById('chat-messages');
+        const chatForm = document.getElementById('chat-form');
+        const chatInput = document.getElementById('chat-input');
+        const sendBtn = document.getElementById('send-btn');
+        const statusText = document.getElementById('status-text');
+        const audioPlayer = document.getElementById('audio-player');
+        const autoVoiceCheckbox = document.getElementById('auto-voice');
+
+        // --- INIT ---
+        async function init() {
+            // Load persona info
+            try {
+                const response = await fetch('/api/persona');
+                personaConfig = await response.json();
+
+                document.getElementById('persona-name').textContent = personaConfig.deceased_name;
+                document.getElementById('persona-subtitle').textContent = `Speaking from ${personaConfig.dimension}`;
+                document.getElementById('persona-avatar').textContent = personaConfig.deceased_name.charAt(0).toUpperCase();
+            } catch (e) {
+                console.log('Could not load persona config');
+            }
+
+            // Load auto-voice preference
+            const savedAutoVoice = localStorage.getItem('neurolous-auto-voice');
+            if (savedAutoVoice === 'true') {
+                autoVoiceCheckbox.checked = true;
+            }
+
+            // Save preference on change
+            autoVoiceCheckbox.addEventListener('change', () => {
+                localStorage.setItem('neurolous-auto-voice', autoVoiceCheckbox.checked);
+            });
+
+            // Load conversation history
+            await loadHistory();
+
+            chatInput.focus();
+        }
+
+        // --- LOAD CONVERSATION HISTORY ---
+        async function loadHistory() {
+            try {
+                statusText.textContent = 'Loading history...';
+                const response = await fetch('/api/history?limit=50');
+                const history = await response.json();
+
+                if (history && history.length > 0) {
+                    // Remove welcome message
+                    const welcome = chatMessages.querySelector('.text-center');
+                    if (welcome) welcome.remove();
+
+                    // Add each message pair
+                    history.forEach(turn => {
+                        // Add user message
+                        addHistoryUserMessage(turn.user_msg);
+                        // Add bot response
+                        addHistoryBotMessage(turn.bot_res);
+                    });
+
+                    scrollToBottom();
+                }
+                statusText.textContent = 'Ready';
+            } catch (e) {
+                console.log('Could not load history:', e);
+                statusText.textContent = 'Ready';
+            }
+        }
+
+        function addHistoryUserMessage(text) {
+            // Remove welcome message if present
+            const welcome = chatMessages.querySelector('.text-center');
+            if (welcome) welcome.remove();
+
+            const msgDiv = document.createElement('div');
+            msgDiv.className = 'flex justify-end';
+            msgDiv.innerHTML = `
+                <div class="message-bubble bg-indigo-600 text-white px-4 py-3 rounded-2xl rounded-br-md shadow-sm" style="animation: none;">
+                    <p class="text-sm">${escapeHtml(text)}</p>
+                </div>
+            `;
+            chatMessages.appendChild(msgDiv);
+        }
+
+        function addHistoryBotMessage(text) {
+            const msgDiv = document.createElement('div');
+            msgDiv.className = 'flex justify-start';
+            msgDiv.innerHTML = `
+                <div class="message-bubble bg-slate-100 text-slate-800 px-4 py-3 rounded-2xl rounded-bl-md shadow-sm" style="animation: none;">
+                    <p class="text-sm">${formatMessage(text)}</p>
+                    <button class="voice-btn mt-2 text-xs text-indigo-600 hover:text-indigo-800 flex items-center gap-1" onclick="playVoiceFromHistory(this, '${encodeURIComponent(text)}')">
+                        <i class="fas fa-volume-up"></i> Play voice
+                    </button>
+                </div>
+            `;
+            chatMessages.appendChild(msgDiv);
+        }
+
+        function playVoiceFromHistory(btn, encodedText) {
+            const text = decodeURIComponent(encodedText);
+            playVoice(text, btn);
+        }
+
+        // --- MESSAGE RENDERING ---
+        function addUserMessage(text) {
+            // Remove welcome message if present
+            const welcome = chatMessages.querySelector('.text-center');
+            if (welcome) welcome.remove();
+
+            const msgDiv = document.createElement('div');
+            msgDiv.className = 'flex justify-end';
+            msgDiv.innerHTML = `
+                <div class="message-bubble bg-indigo-600 text-white px-4 py-3 rounded-2xl rounded-br-md shadow-sm">
+                    <p class="text-sm">${escapeHtml(text)}</p>
+                </div>
+            `;
+            chatMessages.appendChild(msgDiv);
+            scrollToBottom();
+        }
+
+        function addBotMessage() {
+            const msgDiv = document.createElement('div');
+            msgDiv.className = 'flex justify-start';
+            msgDiv.id = 'current-bot-message';
+            msgDiv.innerHTML = `
+                <div class="message-bubble bg-slate-100 text-slate-800 px-4 py-3 rounded-2xl rounded-bl-md shadow-sm">
+                    <div class="typing-indicator">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <p class="text-sm bot-text hidden"></p>
+                    <button class="voice-btn hidden mt-2 text-xs text-indigo-600 hover:text-indigo-800 flex items-center gap-1">
+                        <i class="fas fa-volume-up"></i> Play voice
+                    </button>
+                </div>
+            `;
+            chatMessages.appendChild(msgDiv);
+            scrollToBottom();
+            return msgDiv;
+        }
+
+        function updateBotMessage(text, isComplete = false) {
+            const msgDiv = document.getElementById('current-bot-message');
+            if (!msgDiv) return;
+
+            const typingIndicator = msgDiv.querySelector('.typing-indicator');
+            const botText = msgDiv.querySelector('.bot-text');
+            const voiceBtn = msgDiv.querySelector('.voice-btn');
+
+            if (text) {
+                typingIndicator.classList.add('hidden');
+                botText.classList.remove('hidden');
+                botText.innerHTML = formatMessage(text);
+            }
+
+            if (isComplete && text) {
+                voiceBtn.classList.remove('hidden');
+                voiceBtn.onclick = () => playVoice(text, voiceBtn);
+
+                // Auto-play voice if enabled
+                if (autoVoiceCheckbox.checked) {
+                    playVoice(text, voiceBtn);
+                }
+            }
+
+            scrollToBottom();
+        }
+
+        function formatMessage(text) {
+            // Basic markdown-like formatting
+            return escapeHtml(text)
+                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                .replace(/\*(.*?)\*/g, '<em>$1</em>')
+                .replace(/\n/g, '<br>');
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        function scrollToBottom() {
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        // --- VOICE PLAYBACK ---
+        async function playVoice(text, btn) {
+            if (currentAudio) {
+                currentAudio.pause();
+                currentAudio = null;
+                document.querySelectorAll('.voice-btn').forEach(b => b.classList.remove('playing'));
+            }
+
+            btn.classList.add('playing');
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Loading...';
+            statusText.textContent = 'Generating voice...';
+
+            try {
+                const response = await fetch(`/voice/generate?text=${encodeURIComponent(text)}`);
+                if (!response.ok) throw new Error('Voice generation failed');
+
+                const blob = await response.blob();
+                const url = URL.createObjectURL(blob);
+
+                audioPlayer.src = url;
+                currentAudio = audioPlayer;
+
+                audioPlayer.onended = () => {
+                    btn.classList.remove('playing');
+                    btn.innerHTML = '<i class="fas fa-volume-up"></i> Play voice';
+                    statusText.textContent = 'Ready';
+                    currentAudio = null;
+                };
+
+                audioPlayer.onerror = () => {
+                    btn.classList.remove('playing');
+                    btn.innerHTML = '<i class="fas fa-volume-up"></i> Play voice';
+                    statusText.textContent = 'Voice playback error';
+                };
+
+                await audioPlayer.play();
+                btn.innerHTML = '<i class="fas fa-stop"></i> Playing...';
+                statusText.textContent = 'Playing voice...';
+
+            } catch (e) {
+                console.error('Voice error:', e);
+                btn.classList.remove('playing');
+                btn.innerHTML = '<i class="fas fa-volume-up"></i> Play voice';
+                statusText.textContent = 'Voice unavailable';
+            }
+        }
+
+        // --- CHAT SUBMISSION ---
+        chatForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const message = chatInput.value.trim();
+            if (!message || isGenerating) return;
+
+            isGenerating = true;
+            chatInput.value = '';
+            chatInput.disabled = true;
+            sendBtn.disabled = true;
+            statusText.textContent = 'Thinking...';
+
+            // Add user message
+            addUserMessage(message);
+
+            // Add bot message placeholder
+            addBotMessage();
+
+            try {
+                // Stream the response
+                const formData = new FormData();
+                formData.append('message', message);
+
+                const response = await fetch('/chat/text', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (!response.ok) throw new Error('Chat request failed');
+
+                const reader = response.body.getReader();
+                const decoder = new TextDecoder();
+                let fullResponse = '';
+
+                while (true) {
+                    const { done, value } = await reader.read();
+                    if (done) break;
+
+                    const chunk = decoder.decode(value, { stream: true });
+                    fullResponse += chunk;
+                    updateBotMessage(fullResponse, false);
+                }
+
+                // Mark as complete
+                updateBotMessage(fullResponse, true);
+
+                // Remove the temp ID
+                const currentMsg = document.getElementById('current-bot-message');
+                if (currentMsg) currentMsg.removeAttribute('id');
+
+            } catch (e) {
+                console.error('Chat error:', e);
+                updateBotMessage('Sorry, I encountered an error. Please try again.', true);
+            } finally {
+                isGenerating = false;
+                chatInput.disabled = false;
+                sendBtn.disabled = false;
+                chatInput.focus();
+                statusText.textContent = 'Ready';
+            }
+        });
+
+        // --- KEYBOARD SHORTCUTS ---
+        document.addEventListener('keydown', (e) => {
+            // Escape to stop audio
+            if (e.key === 'Escape' && currentAudio) {
+                currentAudio.pause();
+                currentAudio = null;
+                document.querySelectorAll('.voice-btn').forEach(b => {
+                    b.classList.remove('playing');
+                    b.innerHTML = '<i class="fas fa-volume-up"></i> Play voice';
+                });
+                statusText.textContent = 'Ready';
+            }
+        });
+
+        // Initialize
+        init();
+    </script>
+</body>
+</html>
