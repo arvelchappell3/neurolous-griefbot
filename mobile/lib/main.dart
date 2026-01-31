@@ -54,6 +54,18 @@ class _ChatScreenState extends State<ChatScreen> {
     _speech = stt.SpeechToText();
     _loadSettings();
     _requestPermissions();
+
+    // Listen for audio player state changes
+    _audioPlayer.onPlayerStateChanged.listen((state) {
+      if (state == PlayerState.playing) {
+        setState(() => _isVoiceLoading = false);
+      } else if (state == PlayerState.completed || state == PlayerState.stopped) {
+        setState(() {
+          _isVoiceLoading = false;
+          _playingIndex = null;
+        });
+      }
+    });
   }
 
   @override
@@ -79,17 +91,29 @@ class _ChatScreenState extends State<ChatScreen> {
     try {
       final response = await http.get(
         Uri.parse('$_backendUrl/api/history'),
-      );
+      ).timeout(const Duration(seconds: 10));
 
       if (response.statusCode == 200) {
         final List<dynamic> history = jsonDecode(response.body);
         setState(() {
           _messages.clear();
           for (var item in history) {
-            _messages.add({
-              "role": item['role'] == 'user' ? 'user' : 'bot',
-              "text": item['content'] ?? '',
-            });
+            // API returns user_msg and bot_res fields
+            String? userMsg = item['user_msg'];
+            String? botRes = item['bot_res'];
+
+            if (userMsg != null && userMsg.isNotEmpty) {
+              _messages.add({
+                "role": "user",
+                "text": userMsg,
+              });
+            }
+            if (botRes != null && botRes.isNotEmpty) {
+              _messages.add({
+                "role": "bot",
+                "text": botRes,
+              });
+            }
           }
         });
         _scrollToBottom();
@@ -165,6 +189,12 @@ class _ChatScreenState extends State<ChatScreen> {
   }
 
   Future<void> _playVoice(String text, int index) async {
+    // Don't try to play empty text
+    if (text.isEmpty) {
+      debugPrint("Cannot play empty text");
+      return;
+    }
+
     try {
       setState(() {
         _isVoiceLoading = true;
@@ -175,18 +205,7 @@ class _ChatScreenState extends State<ChatScreen> {
       String audioUrl =
           '$_backendUrl/voice/generate?text=${Uri.encodeComponent(text)}';
 
-      // Listen for when audio starts playing
-      _audioPlayer.onPlayerStateChanged.listen((state) {
-        if (state == PlayerState.playing) {
-          setState(() => _isVoiceLoading = false);
-        } else if (state == PlayerState.completed || state == PlayerState.stopped) {
-          setState(() {
-            _isVoiceLoading = false;
-            _playingIndex = null;
-          });
-        }
-      });
-
+      debugPrint("Playing audio from: $audioUrl");
       await _audioPlayer.play(UrlSource(audioUrl));
     } catch (e) {
       debugPrint("Audio Error: $e");
@@ -194,6 +213,17 @@ class _ChatScreenState extends State<ChatScreen> {
         _isVoiceLoading = false;
         _playingIndex = null;
       });
+
+      // Show error to user
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('Voice playback failed: ${e.toString().split(':').last}'),
+            backgroundColor: Colors.red.shade400,
+            duration: const Duration(seconds: 3),
+          ),
+        );
+      }
     }
   }
 
@@ -299,14 +329,14 @@ class _ChatScreenState extends State<ChatScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              msg['text']!,
+              msg['text'] ?? '',
               style: TextStyle(
                 fontSize: 16,
                 color: isSystem ? Colors.red.shade700 : Colors.black,
               ),
             ),
             // Voice play button for bot messages
-            if (isBot) ...[
+            if (isBot && (msg['text']?.isNotEmpty ?? false)) ...[
               const SizedBox(height: 8),
               GestureDetector(
                 onTap: () => _playVoice(msg['text']!, index),

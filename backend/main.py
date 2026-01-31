@@ -9,6 +9,8 @@ import csv
 import io
 import socket
 import hashlib
+import numpy as np
+from scipy.io import wavfile as scipy_wavfile
 import fitz  # PyMuPDF
 from datetime import datetime, timedelta
 from typing import Optional, List
@@ -354,9 +356,13 @@ def get_voice_cache_path(text: str) -> str:
     return os.path.join(VOICE_CACHE_PATH, f"{text_hash}.wav")
 
 @app.get("/voice/generate")
-async def generate_voice(text: str):
+async def generate_voice(text: str = ""):
     if not voice_engine:
         raise HTTPException(status_code=503, detail="Voice engine not loaded.")
+
+    # Reject empty text requests
+    if not text or not text.strip():
+        raise HTTPException(status_code=400, detail="Text parameter cannot be empty.")
 
     # Check cache first
     cache_path = get_voice_cache_path(text)
@@ -377,16 +383,20 @@ async def generate_voice(text: str):
                 wav = voice_engine.generate(text=text)
 
         print(f"Voice generated, wav shape: {wav.shape}, sample rate: {voice_engine.sr}")
-        # Ensure tensor is 2D for torchaudio.save (channels, samples)
-        wav_cpu = wav.cpu()
-        if wav_cpu.ndim == 1:
-            wav_cpu = wav_cpu.unsqueeze(0)  # Add channel dimension if 1D
-        elif wav_cpu.ndim == 3:
-            wav_cpu = wav_cpu.squeeze(0)  # Remove batch dimension if 3D
-        # wav_cpu should now be 2D: (channels, samples)
 
-        # Save to cache
-        torchaudio.save(cache_path, wav_cpu, voice_engine.sr)
+        # Convert tensor to numpy for scipy
+        wav_cpu = wav.cpu()
+        if wav_cpu.ndim == 3:
+            wav_cpu = wav_cpu.squeeze(0)  # Remove batch dimension if 3D
+        if wav_cpu.ndim == 2:
+            wav_cpu = wav_cpu.squeeze(0)  # Convert (1, samples) to (samples,)
+
+        # Convert to numpy and scale to int16 for WAV
+        wav_numpy = wav_cpu.numpy()
+        wav_int16 = (wav_numpy * 32767).astype(np.int16)
+
+        # Save to cache using scipy (more reliable than torchaudio)
+        scipy_wavfile.write(cache_path, voice_engine.sr, wav_int16)
         print(f"Audio cached to {cache_path}")
         return FileResponse(cache_path, media_type="audio/wav")
     except Exception as e:
