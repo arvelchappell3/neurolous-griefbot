@@ -11,13 +11,13 @@ Neurolous is an **AI-powered grief companion** that helps preserve and interact 
 
 ### Key Features
 
-- **Conversational Memory** — Chat naturally with an AI that remembers life stories, personality traits, and wisdom from your loved one
-- **Voice Synthesis** — Hear responses in a cloned voice using neural text-to-speech (requires a 7-second audio sample)
-- **Knowledge Ingestion** — Upload writings, journals, facts, and life events to build a rich, retrievable memory
-- **Complete Privacy** — Runs 100% offline on your own hardware. No cloud. No data leaves your device.
-- **Mobile App** — iOS and Android companion app for convenient, intimate conversations
-- **Persona Agnostic** — Configure it for any individual via the Admin Panel
-- **Website Chat** — Use the web browser or mobile app to chat
+- **Conversational Memory:** Chat naturally with an AI that remembers life stories, personality traits, and wisdom from your loved one
+- **Voice Synthesis:** Hear responses in a cloned voice using neural text-to-speech (requires a 7-second audio sample)
+- **Knowledge Ingestion:** Upload writings, journals, facts, and life events to build a rich, retrievable memory
+- **Complete Privacy:** Runs 100% offline on your own hardware. No cloud. No data leaves your device.
+- **Mobile App:** iOS and Android companion app for convenient, intimate conversations
+- **Persona Agnostic:** Configure it for any individual via the Admin Panel
+- **Website Chat:** Use the web browser or mobile app to chat
 
 ### The Neurolous Ecosystem
 
