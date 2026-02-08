@@ -52,22 +52,54 @@ This repository contains the open-source implementation of the Neurolous Agent f
 
 ## Getting Started
 
-### Prerequisites
+### Quick Install (Recommended)
 
-Before you begin, ensure you have the following installed:
+The installer script automatically detects your OS, installs all dependencies, pulls the AI models, and launches the app in your browser.
+
+```bash
+git clone https://github.com/arvelchappell3/neurolous-griefbot.git
+cd neurolous-griefbot
+```
+
+**macOS / Linux:**
+```bash
+./install.sh
+```
+
+**Windows (Command Prompt or PowerShell):**
+```
+install.bat
+```
+
+The script will:
+1. Install **Python 3.10+** and **Ollama** if not already present
+2. Start Ollama and pull the required AI models
+3. Create a Python virtual environment and install dependencies
+4. Launch the backend server and open `http://localhost:8000` in your browser
+
+> **Note:** On macOS, [Homebrew](https://brew.sh) is required for automatic Python/Ollama installation. On subsequent runs, the script reuses the existing environment and skips downloads.
+
+### Manual Setup
+
+If you prefer to install manually, follow the steps below.
+
+<details>
+<summary>Click to expand manual setup instructions</summary>
+
+#### Prerequisites
 
 1. **Python 3.10+** - [Download Python](https://www.python.org/downloads/)
 2. **Ollama** - [Download Ollama](https://ollama.ai/)
 3. **Git** - [Download Git](https://git-scm.com/)
 
-### Step 1: Clone the Repository
+#### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/neurolous-bot.git
-cd neurolous-bot
+git clone https://github.com/arvelchappell3/neurolous-griefbot.git
+cd neurolous-griefbot
 ```
 
-### Step 2: Set Up Ollama
+#### Step 2: Set Up Ollama
 
 Install and start Ollama, then pull the required models:
 
@@ -111,9 +143,7 @@ PARAMETER num_ctx 8192' > Modelfile
 ollama create gemma3-8k -f Modelfile
 ```
 
-### Step 3: Create a Virtual Environment
-
-Navigate to the backend directory and create a Python virtual environment:
+#### Step 3: Create a Virtual Environment
 
 ```bash
 cd backend
@@ -129,17 +159,13 @@ source venv/bin/activate
 # venv\Scripts\activate
 ```
 
-### Step 4: Install Dependencies
-
-With your virtual environment activated, install the required packages:
+#### Step 4: Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Step 5: Run the Server
-
-Start the FastAPI backend server:
+#### Step 5: Run the Server
 
 ```bash
 python main.py
@@ -147,9 +173,9 @@ python main.py
 
 The server will start on `http://localhost:8000`.
 
-### Step 6: Access the Application
+</details>
 
-Open your browser and navigate to:
+### Access the Application
 
 | URL | Description |
 |-----|-------------|
